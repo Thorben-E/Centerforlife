@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="flex flex-col justify-center items-center">
+		<h1 class="text-4xl m-4">Events</h1>
+		<section class="flex flex-wrap gap-4 justify-center">
+			<div class="flex gap-5 p-4 border border-black rounded w-[80vw]">
+				<img src="/5_flyer_retreatapr23_JPEG.jpg" alt="" class="w-[50%]">
+				<div class="w-[50%]">
+					<h3 class="text-xl">"Love in Motion" retraite Portugal - FULLY BOOKED</h3>				
+					<h2 class="text">14 - 18 april </h2>
+					<p> Moodz (Silves)</p>
+				</div>
+			</div>
+			<div class="flex gap-5 p-4 border border-black rounded w-[80vw]">
+				<img src="/4-dominicanenklooaster-in-huissen.jpg" alt="" class="w-[50%]">
+				<div class="w-[50%]">
+					<h2 class="text-xl">Center for Life Yoga Verdiepingsdag</h2>
+					<h2>13 mei</h2>
+					<a href="/hannah"><button class="border rounded-lg p-2 bg-[#007ab5] text-white">Aanmelden</button></a>
+				</div>
+			</div>
+			<div class="flex gap-5 p-4 border border-black rounded w-[80vw]">
+				<img src="/2a_meditatieruimte_maanhoeve.jpg" alt="" class="w-[50%]">
+				<div class="w-[50%]">
+					<h2 class="text-xl">"Leven in Beweging" retraite Nederland - NOG EEN PAAR PLEKKEN VRIJ</h2>
+					<h2>29 september - 3 oktober </h2>
+					<p>De maanhoeve (Drenthe)</p>
+					<a href="/hannah"><button class="border rounded-lg p-2 bg-[#007ab5] text-white">Aanmelden</button></a>
+				</div>
+			</div>
+			<div class="flex gap-5 p-4 border border-black rounded w-[80vw]">
+				<img src="/3_kiemkracht-.jpg" alt="" class="w-[50%]">
+				<div class="w-[50%]">
+					<h2 class="text-xl">Center for Life Yoga Verdiepingsdag</h2>
+					<h2>September 2023</h2>
+				</div>
+			</div>
+			<div class="flex gap-5 p-4 border border-black rounded w-[80vw]">
+				<img src="/6_moodz_bedden.jpg" alt="" class="w-[50%]">
+				<div class="w-[50%]">
+					<h2 class="text-xl">Mei 2024 retraite Portugal (datum nog niet bekend)</h2>
+					<p>Moodz (Silves)</p>
+				</div>
+			</div>
+		</section>
+		<div class="flex py-10 justify-center w-full mt-4 bg-[#007ab5]">
+			<div class="ml-embedded" data-form="OXadBd"></div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.event {
+		display: flex;
+		gap: 5px;
+		padding: 10px;
+		border: 1px solid black;
+		height: 20vh;
+		border-radius: 5px;
+	}
+</style>
