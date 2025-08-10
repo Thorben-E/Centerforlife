@@ -1,18 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from '@astrojs/image/components'
+import Footer from '../layouts/Footer.astro';
 const hannahImage = '/foto_peggy.jpg'
 const yogaImage = '/7_yoga_armen_omhoog.jpg'
 const programmaImage = '/12_arashiyama-bamboo-grove.jpg'
 const eventsImage = '/1_Moodz-Spa-Resort_zwembad_boven.jpg'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title=''>
 	<main>
-		<section class="min-h-[60vh] flex justify-center md:h-[50vh]">
-			<div class="flex flex-col gap-4 justify-center items-center bg-no-repeat bg-center bg-contain" style="background-image: url(/logo.png)">
-				<h1 class="text-5xl">Live <i>Your </i>Life!</h1>
-				<p>Een leven waarin je de fijnste versie van jezelf bent.</p>
+		<section class="flex items-center">
+			<div class="flex flex-col sm:flex-row text-blue-700 h-[90vh] w-screen relative">
+				
+				<div class="relative h-1/2 sm:w-1/2 sm:h-full order-3">
+        	<img src="shiatsu2.jpg" alt="Shiatsu Image" class="object-cover h-full w-full filter brightness-[0.75]">
+        	<div class="absolute inset-0 flex items-center justify-center">
+						<a href="/shiatsu" class=" text-white py-2 px-4 text-4xl rounded-lg hover:text-5xl transition-all duration-500">
+      	  	  Ga naar Shiatsu
+       		 	</a>
+        	</div>
+      	</div>
+				
+				<!-- White Line -->
+				<div class="w-full h-1 sm:w-1 sm:h-full bg-white order-2"></div>  
+				
+				<div class="relative h-1/2 sm:w-1/2 sm:h-full order-1">
+    	    <img src="/studio_velp_website.png" alt="Shiatsu Image" class="h-full object-cover w-full brightness-[0.75]">
+     		  <div class="absolute inset-0 flex items-center justify-center">
+					<a href="/yoga_algemeen" class=" text-white py-2 px-4 text-4xl rounded-lg hover:text-5xl transition-all duration-500">
+        	  Ga naar Yoga
+        	</a>
+        </div>
+
 			</div>
 			<div id="cookieWrapper" class="hidden bg-[#f7f7f7] fixed bottom-5 left-5 max-w-[300px] w-[50vw] flex flex-col items-center border p-4 rounded-2xl">
 				<img src="cookie.png" alt="couldn't load img" class="w-[30%]">
@@ -21,65 +40,11 @@ const eventsImage = '/1_Moodz-Spa-Resort_zwembad_boven.jpg'
 					<p class="text-sm text-gray-600">This website use cookies to ensure you get the best experience on our website</p>
 					<div class="flex gap-2 items-center">
 						<button class="border p-2" id="cookieBtn">I understand</button>
-						<a href="#" class="">Learn more</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="flex flex-col gap-10 justify-center items-center py-20 bg-[#f7f7f7] md:flex-row">
-			<div class="flex w-[90vw] flex-col md:w-[40vw]">
-				<h1 class="text-3xl mb-4">Over Hannah</h1>
-				<p>Hannah Mutsaerts heeft door haar bijna-doodervaring en andere indringende levenservaringen geleerd hoe belangrijk het is dat we ons eigen leven leven.<br><br> 
-				Hannah:<i> “Het is mijn missie ervoor zorgen dat jij van jezelf helemaal jouw eigen leven mag leven op jouw manier. Het is ontzettend belangrijk dat wanneer je op je sterfbed ligt, je met voldoening en een glimlach op je gezicht terugkijkt.”</i></p>
-				<br>
-				<a href="/hannah"><button class="border rounded-lg p-2 bg-[#007ab5] text-white">Lees meer over Hannah</button></a>
-			</div>
-			<div class="flex w-[90vw] justify-center items-center md:w-[40vw]">
-				<img src={hannahImage} alt="" class="rounded-xl">
-			</div>	
-		</section>
-		<section class="flex flex-col gap-10 justify-center items-center py-20 md:flex-row">
-			<div class="w-[90vw] md:w-[40vw] md:order-last">
-				<h1 class="text-3xl mb-4">Live your life programma</h1>
-				<p class="mt-3">Hoe zou het zijn als je een leven leidt waarin je de fijnste versie van jezelf bent? 
-Een leven waarin je weet èn voelt dat je echt jouw leven leeft, vanuit jouw unieke Zijn. 
-Laat dit tot je doordringen: <i>Er is maar één jij en het is de bedoeling dat jij dit leven op jouw manier leeft.</i>  Niet straks, maar nu. En om dat te kunnen doen is het van cruciaal belang dat jij helemaal, vanuit je kern, mag zijn wie je bent. Alleen dan zal jij op je mooist tot leven komen.</p>
-				<br>
-				<a href="/programma"><button class="border rounded-lg p-2 bg-[#007ab5] text-white">Lees meer</button></a>
-			</div>
-			<div class="w-[90vw] md:w-[40vw] flex justify-center items-center">
-				<img src={programmaImage} alt="" class="rounded-xl">
-			</div>
-		</section>
-		<section class="flex flex-col gap-10 justify-center items-center py-20 bg-[#f7f7f7] md:flex-row">
-			<div class="w-[90vw] md:w-[40vw]">
-				<h1 class="text-3xl mb-4">Yoga</h1>
-				<p>Ieder lichaam streeft naar gezondheid, altijd, ook jouw lijf. 
-					Je hebt een gezond lichaam nodig om vreugdevol met voldoening 
-					jouw leven te leven. Alles staat of valt met je gezondheid.</p>
-				<br>
-				<p>Door yoga te volgen bij Center for Life wordt jij je weer bewust dat je lichaam je belangrijkste instrument is, leer je te voelen wat je lichaam nodig heeft en hoe de gezondheid van je lichaam praktisch te ondersteunen.</p>
-				<div class="flex gap-2 mt-4">
-					<a href="/yoga"><button class="border rounded-lg p-2 bg-[#007ab5] text-white">Lees meer</button></a>
-					<button class="border rounded-lg p-2 bg-[#007ab5] text-white">Doe mee met een proefles</button>
-				</div>
-			</div>
-			<div class="w-[90vw] md:w-[40vw] flex justify-center items-center">
-				<img src={yogaImage} alt="" class="rounded-xl">
-			</div>
-		</section>
-		<section class="flex flex-col gap-10 justify-center items-center py-20 md:flex-row">
-			<div class="w-[90vw] md:w-[40vw] md:order-last">
-				<h1 class="text-3xl">Events</h1>
-				<a href="/events"></a>
-			</div>
-			<div class="w-[90vw] flex justify-center items-center md:w-[40vw]">
-				<img src={eventsImage} alt="" class="rounded-xl">
-			</div>
-		</section>
-		<div class="flex py-10 justify-center bg-[#007ab5]">
-				<div class="ml-embedded" data-form="OXadBd"></div>
-		</div>
+	
 	</main>
 </Layout>
 

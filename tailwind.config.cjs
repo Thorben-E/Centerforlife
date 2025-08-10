@@ -4,9 +4,12 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ["FuturaLight", "system-ui"]
+				sans: ["Inter", "Arial", "sans-serif"],
+				custom: ["FuturaLight", 'sans-serif']
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+    // ...
+  ],
 }
