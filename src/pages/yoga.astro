@@ -97,8 +97,18 @@ import Footer from '../layouts/Footer.astro';
 					<br>
 					<p><strong class="text-[#0f6dbf]">Materialen die we gebruiken tijdens de les</strong><br> We gebruiken een mat, bolster, riem en blok, zie foto en zie FAQ voor details en alternatieven.</p>
 					<br>
-					<p><b class="text-[#0f6dbf]">Lesoverzicht 2026 studio/online:</b></p>	
-					<p><b>Start yogalessen:</b> maandag 5 januari</p>
+					<p><b class="text-[#0f6dbf]">Lesoverzicht 2026</b></p>	
+					<b><p>Er is elke week les, behalve op de volgende dagen:</p></b>
+					<ul>
+						<li>maandag 16 t/m 20 februari</li>
+						<li>maandag 6 april (2e Paasdag)</li>
+						<li>vrijdag 15 mei</li>
+						<li>vrijdag 5 juni</li>
+						<li>maandag 8 juni t/m 12 juni</li>
+						<li>(Er is <b>wel </b>les op Goede Vrijdag 3 april)</li>
+					</ul>
+					<br>
+					<p>Als op jouw lesmoment de les uitvalt, voel je vrij om in die week op een ander moment de les in te halen. Wel graag van tevoren afstemmen via mail of whatsapp. Dank je wel.</p>
 					<br>
 					<p><strong class="text-[#0f6dbf]">Meer informatie?</strong><br> Behoefte meer informatie? Behoefte aan individuele lessen? Behoefte aan yoga op andere locatie? Yoga inpassen in een workshop of retraite? Er is veel mogelijk, voel je vrij om te vragen.</p>	
 					<p>Neem contact op via info@centerforlife.nl Tot bij de (online) les, de Yoga Intensives of een retraite!</p>
@@ -110,24 +120,3 @@ import Footer from '../layouts/Footer.astro';
 		<Footer />	
 	</main>
 </Layout>
-
-<script>
-	document.getElementById('proefles').addEventListener('click', (e) => {
-		proeflesSubmit(e)
-	})
-
-	document.getElementById('abbonoment').addEventListener('click', (e) => {
-		abbonomentSubmit(e)
-	})
-
-	const proeflesSubmit = (e) => {
-		e.preventDefault()
-		window.location.href = '/'
-	}
-
-	const abbonomentSubmit = (e) => {
-		e.preventDefault()
-		window.location.href = '/'
-	}
-
-</script>

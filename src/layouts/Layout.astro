@@ -16,7 +16,7 @@ const title = "Centerforlife";
 		<link rel="stylesheet" href="/fonts/FuturaLight.otf">
 		<title>{title}</title>
 		<script defer src="/_vercel/insights/script.js"></script>
-		<script>
+		<script is:inline>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
     n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
@@ -118,20 +118,22 @@ const title = "Centerforlife";
 	  });
 	}
 
-
 	const collapse = document.getElementById('collapse')
 	const navbar = document.getElementById('navbar-default')
-	collapse.addEventListener('click', () => {
-		navbar.classList.toggle('hidden')
-	})
+	if (collapse) {
+		collapse.addEventListener('click', () => {
+		navbar.classList.toggle('hidden')})
+	}
 
 	// Get the Yoga link and the dropdown-menu
 	const yogaLink = document.querySelector('.dropdown-toggle');
 	const dropdownMenu = document.querySelector('.dropdown-menu');
 
 	// Add an event listener to the Yoga link
-	yogaLink.addEventListener('click', function() {
+	if (yogaLink) {
+		yogaLink.addEventListener('click', function() {
 	  // Toggle the active class on the dropdown-menu
-	  dropdownMenu.classList.toggle('hidden');
-	});
+	  dropdownMenu.classList.toggle('hidden');});
+	}
+	
 </script>

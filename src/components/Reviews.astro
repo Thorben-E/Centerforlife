@@ -1,0 +1,54 @@
+---
+// src/components/Reviews.astro
+---
+
+<div class="reviews-wrapper" style="min-height: 200px; width: 100%;">
+  <div 
+    class="md-reviews" 
+    data-max-number-of-reviews="25" 
+    data-order="date" 
+    data-clinician="r5W11wDd" 
+    data-env="centerforlife"
+  >
+    <p style="text-align: center; color: #666;">Loading reviews...</p>
+  </div>
+</div>
+
+<style is:global>
+  /* Force the container to have a visible area */
+  .md-reviews {
+    display: block !important;
+    visibility: visible !important;
+    min-height: 500px !important;
+    width: 100% !important;
+    border: 2px dashed red; /* Temporary: to see the container's bounds */
+  }
+
+  /* Force the individual reviews to show up */
+  .md-review {
+    display: block !important;
+    opacity: 1 !important;
+    background: white !important; /* Ensure they aren't transparent */
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+</style>
+
+<script is:inline>
+  function loadMijnDiad() {
+    const id = 'md-reviews-script';
+    if (document.getElementById(id)) return;
+
+    const js = document.createElement('script');
+    js.id = id;
+    js.src = 'https://public.mijndiad.nl/widgets/reviews.js';
+    js.async = true;
+    document.body.appendChild(js);
+  }
+
+  // Run on initial load
+  loadMijnDiad();
+
+  // If you use Astro View Transitions, run on every page swap
+  document.addEventListener('astro:after-swap', loadMijnDiad);
+</script>
