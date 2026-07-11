@@ -21,9 +21,9 @@ import Footer from '../layouts/Footer.astro';
             <div class="bg-gradient-to-br from-[#eaf4ff] to-white rounded-xl p-6 shadow-sm">
               <p class="text-sm text-slate-600">Data:</p>
               <ul class="mt-2 text-slate-800 font-medium text-sm leading-tight">
-                <li class="break-words">20 sept — Masterclass 1 (Bekken, heupen)</li>
-                <li class="break-words">1 nov — Masterclass 2 (Schouders, bovenrug)</li>
-                <li class="break-words">12 dec — Masterclass 3 (Voeten, enkels)</li>
+                <li class="break-words">20 sept — Masterclass 1</li>
+                <li class="break-words">1 nov — Masterclass 2</li>
+                <li class="break-words">12 dec — Masterclass 3</li>
               </ul>
             </div>
           </div>
@@ -32,26 +32,29 @@ import Footer from '../layouts/Footer.astro';
 
       <section class="mb-8 hidden gap-5 md:grid md:grid-cols-3">
         <div class="overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
-          <img src="/masterclass1.png" alt="Masterclass over bekken en heupen" class="aspect-[4/5] w-full object-cover object-center scale-[1.06]" loading="lazy" />
+          <img src="/masterclass3.png" alt="Masterclass over voeten en enkels" class="aspect-[4/5] w-full object-cover object-center scale-[1.06]" loading="lazy" />
           <div class="px-5 py-8 sm:py-8">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0f6dbf]">Masterclass 1</p>
-            <h2 class="mt-3 text-lg font-semibold text-slate-800">Bekken, heupen & fundament</h2>
+            <h2 class="mt-3 text-lg font-semibold text-slate-800">Basis – Voeten, enkels en benen</h2>
+            <p class="mt-2 text-sm text-slate-500">20 sept</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
+          <img src="/masterclass1.png" alt="Masterclass over bekken en heupen" class="aspect-[4/5] w-full object-cover object-center scale-[1.06]" loading="lazy" />
+          <div class="px-5 py-8 sm:py-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0f6dbf]">Masterclass 2</p>
+            <h2 class="mt-3 text-lg font-semibold text-slate-800">Fundament – Bekken, heupen en onderrug</h2>
+            <p class="mt-2 text-sm text-slate-500">1 nov</p>
           </div>
         </div>
 
         <div class="overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
           <img src="/masterclass2.png" alt="Masterclass over schouders en bovenrug" class="aspect-[4/5] w-full object-cover object-center scale-[1.06]" loading="lazy" />
           <div class="px-5 py-8 sm:py-8">
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0f6dbf]">Masterclass 2</p>
-            <h3 class="mt-3 text-lg font-semibold text-slate-800">Schouders, bovenrug & ruimte</h3>
-          </div>
-        </div>
-
-        <div class="overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
-          <img src="/masterclass3.png" alt="Masterclass over voeten en enkels" class="aspect-[4/5] w-full object-cover object-center scale-[1.06]" loading="lazy" />
-          <div class="px-5 py-8 sm:py-8">
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0f6dbf]">Masterclass 3</p>
-            <h3 class="mt-3 text-lg font-semibold text-slate-800">Voeten, enkels & stabiliteit</h3>
+            <h2 class="mt-3 text-lg font-semibold text-slate-800">As – Schouders, wervelkolom en bovenrug</h2>
+            <p class="mt-2 text-sm text-slate-500">12 dec</p>
           </div>
         </div>
       </section>
@@ -114,8 +117,8 @@ import Footer from '../layouts/Footer.astro';
 
       <!-- Booking CTA block -->
       <section id="book" class="bg-white rounded-xl p-6 shadow-md mb-8">
-        <h3 class="text-xl font-semibold text-[#0f6dbf]">Boek je plek</h3>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <h3 class="text-xl font-semibold text-[#0f6dbf]">Boek je plek — los of als reeks</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           <!-- Primary full-reeks CTA -->
           <div class="md:col-span-2 bg-gradient-to-r from-[#f8fbff] to-white p-6 rounded-lg border border-slate-100 shadow-sm flex flex-col justify-between">
             <div>
@@ -133,6 +136,7 @@ import Footer from '../layouts/Footer.astro';
 
           <!-- Individual dates -->
           <div class="md:col-span-1">
+            <p class="text-slate-700 text-sm mb-3">Kies één ochtend als je graag één masterclass los wil volgen.</p>
             <div class="space-y-3">
               <a target="_blank" href="https://buy.stripe.com/aFa00j7Au1oI5ySeMzeZ208" class="flex items-center justify-between w-full bg-white border border-slate-200 rounded-lg p-3 hover:shadow-sm">
                 <div>
