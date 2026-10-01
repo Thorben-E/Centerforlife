@@ -1,241 +1,190 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Reviews from '../components/Reviews.astro';
 import Footer from '../layouts/Footer.astro';
+
+const filledButton = 'inline-block rounded-lg bg-[#0f6dbf] px-4 py-2 text-white';
+const afspraak = 'mailto:info@centerforlife.nl?subject=Afspraak%20shiatsu';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="flex flex-col justify-center items-center">
-		<div class="flex flex-col gap-4">
-			<section class="w-[100vw] flex flex-col items-center xl:flex-row xl:justify-center gap-10">
-				<div>
-					
-				</div>
-				<div class="xl:w-[40vw] w-[80vw]">
-					<h1 class="text-4xl my-10 text-[#0f6dbf]">Zen Shiatsu</h1>
-					<p class="text-[#0f6dbf]">Wat is Shiatsu?</p>
-					<p>Shiatsu is onderdeel van de Oosterse Geneeswijze en wordt al duizenden jaren toegepast om verstoringen van de levensenergie (ki/chi) in het lichaam weer in balans te brengen. Er kunnen stagnaties van ki zijn ontstaan (vb. gewrichtsklachten, hoofdpijn of constipatie), of een tekort aan ki (vb. niet goed doorslapen, koude handen en voeten, slechte vertering). <span class="font-bold">Door de ki in beweging te brengen en de balans daarin te verbeteren wordt het lichaam vitaler, verminderen of verdwijnen ziektes en klachten en komen mensen lekkerder in hun vel te zitten.</span>  Hoe de behandeling uitpakt en hoe vaak je moet komen, is per persoon en per klacht verschillend. </p>
-					<br>
-					<p class="text-[#0f6dbf]">Voorbeeld van klachten die worden behandeld met shiatsu: </p>
-					<ul class="ml-4">
-						<li class="list-disc">nek- en schouderklachten</li>
-						<li class="list-disc">hoofdpijn / migraine</li>
-						<li class="list-disc">spanning / prikkelbaarheid</li>
-						<li class="list-disc">ademhalingsproblemen</li>
-						<li class="list-disc">slaapproblemen</li>
-						<li class="list-disc">stress / burnout</li>
-						<li class="list-disc">teveel koude of hitte</li>
-						<li class="list-disc">spijsverteringsklachten</li>
-						<li class="list-disc">menstruele verstoringen</li>
-						<li class="list-disc">voor en na een bevalling</li>
-						<li class="list-disc">vermoeidheid</li>
-						<li class="list-disc">emotionele verstoringen: hannah is in staat om op een diepe liefdevolle manier emoties te transformeren die je op dit moment belemmeren stappen te zetten of waardoor je vast blijft zitten in het verleden</li>
-					</ul>
-					<br>
-					<p><b>SHIATSU</b></p>
-<p>De shiatsu die gegeven wordt is Zen Shiatsu, een Japanse vorm van drukpunt- en meridiaantherapie met een holistische benadering. Holistisch wil zeggen dat naar de mens als geheel gekeken wordt: lichaam, denken, voelen.<br>
-Vaak blijkt dat aan verschillende klachten dezelfde oorzaak ten grondslag ligt.<br>
-Zo is het niet raar als je darmklachten hebt, je vaak rond 5 uur ’s ochtends wakker wordt en je met je kiezen of tanden knarst of moeite hebt met het loslaten van emoties.</p>
-<br>
-<p>Zen Shiatsu wordt vaak gecombineerd met <i>Chi Nei Tsang (CNT)</i>. Dit is diepe orgaanmassage in de buik. Dit is een bijzonder mooie aanvulling. Waarom?<br>
-<br>Er kan van alles gebeuren in je leven waardoor energie blokkeert. Veel energieblokkades gaan vastzitten in de organen, met name in de buik. Dit beperkt onze levensenergie (ki/chi) en de functie van de vitale organen. De <b>oorzaak van deze blokkades is vooral negatieve emoties en stress</b>, maar ook voeding, houding, toxines, externe invasies als ongelukken en operaties spelen een belangrijke rol.<br>
-Met CNT werken we direct in de buik en op de organen in de buik om de chi in ons centrum weer in beweging te brengen.<br>
-Hierdoor komt vervolgens de energie in ons fascie, andere organen, bloedvaten, zenuwbanen en lymfe ook weer in beweging.</p>
-<br>
-<p>Het is een aanraking van lichaam, gedachten / overtuigingen en emoties met als resultaat meer gezondheid en een vergroot bewustzijn.<br>
-Dit maakt ons als mens vriendelijker, vrolijker, liefdevoller, eerlijker, moediger, wijzer en verantwoordelijker. Wat een verrijking. Hannah heeft zelf de opleiding CNT als heel voedend, helend en verdiepend ervaren, niet alleen als therapeut, maar ook als mens.</p> <br>
+<Layout title="Zen Shiatsu">
+	<main>
+		<section class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="max-w-2xl space-y-4">
+				<h1 class="text-4xl text-[#0f6dbf]">Zen Shiatsu</h1>
+				<h2 class="text-2xl text-[#0f6dbf]">Wat is Shiatsu?</h2>
+				<p>Shiatsu is onderdeel van de Oosterse Geneeswijze en wordt al duizenden jaren toegepast om verstoringen van de levensenergie (ki/chi) in het lichaam weer in balans te brengen. Er kunnen stagnaties van ki zijn ontstaan (vb. gewrichtsklachten, hoofdpijn of constipatie), of een tekort aan ki (vb. niet goed doorslapen, koude handen en voeten, slechte vertering). <strong>Door de ki in beweging te brengen en de balans daarin te verbeteren wordt het lichaam vitaler, verminderen of verdwijnen ziektes en klachten en komen mensen lekkerder in hun vel te zitten.</strong> Hoe de behandeling uitpakt en hoe vaak je moet komen, is per persoon en per klacht verschillend.</p>
+				<h3 class="text-xl text-[#0f6dbf]">Voorbeeld van klachten die worden behandeld met shiatsu</h3>
+				<ul class="list-disc space-y-1 pl-5">
+					<li>nek- en schouderklachten</li>
+					<li>hoofdpijn / migraine</li>
+					<li>spanning / prikkelbaarheid</li>
+					<li>ademhalingsproblemen</li>
+					<li>slaapproblemen</li>
+					<li>stress / burnout</li>
+					<li>teveel koude of hitte</li>
+					<li>spijsverteringsklachten</li>
+					<li>menstruele verstoringen</li>
+					<li>voor en na een bevalling</li>
+					<li>vermoeidheid</li>
+					<li>emotionele verstoringen: hannah is in staat om op een diepe liefdevolle manier emoties te transformeren die je op dit moment belemmeren stappen te zetten of waardoor je vast blijft zitten in het verleden</li>
+				</ul>
+			</div>
+			<img src="/opt/shiatsu1.webp" alt="Shiatsu behandeling" class="w-full rounded-lg" decoding="async">
+		</section>
 
-<p><b>Voor het maken van een afspraak</b> stuur een email naar <a href="mailto:info@centerforlife.nl">info@centerforlife.nl</a>.<br>
-Neem bij twijfel, vragen of mogelijkheden contact op.</p>
-<br>
+		<section class="bg-blue-50">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<div class="max-w-2xl space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Shiatsu en Chi Nei Tsang</h2>
+					<p>De shiatsu die gegeven wordt is Zen Shiatsu, een Japanse vorm van drukpunt- en meridiaantherapie met een holistische benadering. Holistisch wil zeggen dat naar de mens als geheel gekeken wordt: lichaam, denken, voelen.</p>
+					<p>Vaak blijkt dat aan verschillende klachten dezelfde oorzaak ten grondslag ligt.</p>
+					<p>Zo is het niet raar als je darmklachten hebt, je vaak rond 5 uur ’s ochtends wakker wordt en je met je kiezen of tanden knarst of moeite hebt met het loslaten van emoties.</p>
+					<p>Zen Shiatsu wordt vaak gecombineerd met <i>Chi Nei Tsang (CNT)</i>. Dit is diepe orgaanmassage in de buik. Dit is een bijzonder mooie aanvulling. Waarom?</p>
+					<p>Er kan van alles gebeuren in je leven waardoor energie blokkeert. Veel energieblokkades gaan vastzitten in de organen, met name in de buik. Dit beperkt onze levensenergie (ki/chi) en de functie van de vitale organen. De <strong>oorzaak van deze blokkades is vooral negatieve emoties en stress</strong>, maar ook voeding, houding, toxines, externe invasies als ongelukken en operaties spelen een belangrijke rol.</p>
+					<p>Met CNT werken we direct in de buik en op de organen in de buik om de chi in ons centrum weer in beweging te brengen.</p>
+					<p>Hierdoor komt vervolgens de energie in ons fascie, andere organen, bloedvaten, zenuwbanen en lymfe ook weer in beweging.</p>
+					<p>Het is een aanraking van lichaam, gedachten / overtuigingen en emoties met als resultaat meer gezondheid en een vergroot bewustzijn.</p>
+					<p>Dit maakt ons als mens vriendelijker, vrolijker, liefdevoller, eerlijker, moediger, wijzer en verantwoordelijker. Wat een verrijking. Hannah heeft zelf de opleiding CNT als heel voedend, helend en verdiepend ervaren, niet alleen als therapeut, maar ook als mens.</p>
+					<p>Voor het maken van een afspraak stuur een email naar <a href="mailto:info@centerforlife.nl" class="underline">info@centerforlife.nl</a>. Neem bij twijfel, vragen of mogelijkheden contact op.</p>
+					<a href={afspraak} class={filledButton}>Stuur een e-mail voor een afspraak</a>
+				</div>
+				<img src="/opt/shiatsu_buik.webp" alt="Behandeling van de buik" class="w-full rounded-lg" loading="lazy" decoding="async">
+			</div>
+		</section>
 
-					<a class="hidden" href="https://centerforlife.clientomgeving.nl/afspraak-maken?"><button class="border rounded-lg p-1 mb-4 bg-[#0f6dbf] text-white hiden">Maak hier een afspraak</button></a>
-				</div>
-				<div class="xl:w-[40vw] w-[80vw]">
-					<img src="/shiatsu1.jpg" alt="" class="xl:w-[40vw] w-[80vw] rounded-lg mb-4">
-				</div>
-			</section>
-			<section class="w-[100vw] py-10 flex flex-col items-center xl:flex-row xl:justify-center gap-10 mb-10 bg-blue-100">	
-				<div class="xl:w-[40vw] w-[80vw]">
-					<p class="text-[#0f6dbf]">Moxa Therapie</p>
+		<section>
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<img src="/opt/moxa.webp" alt="Moxa" class="w-full rounded-lg" loading="lazy" decoding="async">
+				<div class="max-w-2xl space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Moxa therapie</h2>
 					<p>Moxa therapie wordt binnen de Oosterse Geneeswijze gebruikt vanwege haar verwarmende werking en het versterken van de stroom van de levensenergie (ki/chi).</p>
-					<br>
 					<p>Moxa is de Chinese naam voor bijvoetkruid wat wordt toegepast om oa gewrichtsklachten (blessures) en spijsverteringsproblemen te doen verminderen, om het lichaam te versterken in geval van zware vermoeidheid, burnout en na zwangerschap en bevalling.</p>
-					<br>
 					<p>Een belangrijke toepassing van moxa is het draaien van een baby bij stuitligging, en het op gang brengen en versoepelen van de bevalling. Hannah heeft hier succesvolle ervaring mee. Voor haar eigen bevallingen heeft zij de cursus Hypnobirthing gevolgd, waardoor zij zwangeren met waardevolle tips de deur uit laat gaan.</p>
-					<br>
 					<p>Op de foto zie je een voorbeeld van een zwarte moxa sigaar. Hannah werkt ook met losse moxa in de vorm van okyu en cones. Moxa wordt binnen de praktijk altijd toegepast als aanvulling op een shiatsu behandeling.</p>
-					<br>
-					<p><b>Voor het maken van een afspraak stuur een email naar info@centerforlife.nl</b></p>
-					<br>
-					<a href="https://centerforlife.clientomgeving.nl/afspraak-maken?"><button class="border rounded-lg p-1 mb-4 bg-[#0f6dbf] text-white hidden">Maak hier een afspraak</button></a>
+					<p><strong>Voor het maken van een afspraak stuur een email naar info@centerforlife.nl</strong></p>
 				</div>
-				<div class="xl:w-[40vw] xl:order-first w-[80vw]">
-					<img src="/moxa.jpg" alt="" class="xl:w-[40vw] w-[80vw] rounded-lg">
+			</div>
+		</section>
+
+		<section class="bg-blue-50">
+			<div class="mx-auto max-w-2xl space-y-4 px-6 py-12">
+				<h2 class="text-2xl text-[#0f6dbf]">Begeleiding</h2>
+				<p>Soms wil je niet op yogales komen, en weet je niet of zen shiatsu wel het juiste is, maar ervaar je wel dat je vast zit, niet lekker in je vel zit of verward bent. Een gesprek kan dan al veel duidelijkheid geven.</p>
+				<p>Door Hannah’s verfijnde manier van werken en haar sterke intuïtie is elke vorm begeleiding helemaal afgestemd op jou. Jij bent niet degene die moet passen in een behandelmethode, het is de methode die zich aanpast aan jou.</p>
+				<h3 class="text-xl text-[#0f6dbf]">Voorbeeldsituaties voor individuele begeleiding zijn</h3>
+				<ul class="list-disc space-y-1 pl-5">
+					<li>steeds weer in dezelfde (negatieve) patronen terecht komen</li>
+					<li>onverklaarbaar emotioneel zijn</li>
+					<li>niet weten wat voor jou belangrijk is in het leven, onduidelijkheid over wat je hier komt doen</li>
+					<li>verlies van een dierbare / relatie / situatie</li>
+				</ul>
+				<p>Hannah heeft veel ervaring met mensen die <strong>energetisch verdwaald</strong> zijn of een verstoorde energetische huishouding hebben, dat wil zeggen dat jij je heel ijl kan voelen, beroerd wordt van grote groepen mensen, ineens heel moe of beroerd wordt van specifieke personen of plaatsen, en andere soortgelijke situaties. Binnen een paar behandelingen kan hier een grote verbetering in ontstaan.</p>
+				<p>Omdat Hannah veel ervaring heeft met de <strong>dood</strong>, zowel om haar heen als haar eigen bijna dood ervaringen en het doorstaan van zware ongevallen, is het voor mensen die weten dat ze ongeneeslijk ziek zijn, weten dat ze gaan sterven en angstig zijn voor de dood een enorme opluchting om met Hannah een afspraak te maken. Meerdere mensen zijn na één of twee gesprekken zeer vredig het stervensproces ingegaan.</p>
+				<p>Wil je eerst overleggen of een afspraak zinvol is? Voel je vrij om Hannah te bellen.</p>
+			</div>
+		</section>
+
+		<section class="bg-[#f8fbfe] py-16">
+			<div class="mx-auto max-w-6xl px-6">
+				<h2 class="mb-4 text-center text-2xl text-[#0f6dbf]">Wat cliënten zeggen</h2>
+				<p class="mx-auto mb-10 max-w-2xl text-center text-sm leading-relaxed text-gray-600 md:text-base">
+					Omdat veel van mijn cliënten elkaar kennen, zijn wegens privacy redenen alle namen op anoniem gezet.
+					Deze beoordelingen worden door de cliënten zelf geschreven na ontvangst van de factuur en zijn door mij niet te beïnvloeden.
+				</p>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<div class="relative overflow-hidden rounded-xl bg-white p-8 shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)]">
+						<div class="absolute right-6 top-4 select-none font-serif text-8xl text-[#0f6dbf]/10">”</div>
+						<div class="relative z-10">
+							<div class="mb-4 flex items-center justify-between">
+								<span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
+								<span class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-400">Jan. 2026</span>
+							</div>
+							<div class="mb-4 text-xl text-amber-400">★★★★★</div>
+							<p class="text-base italic leading-relaxed text-gray-700">“Hannah is recht door zee, durft observaties te benoemen, heeft een nuchtere kijk en een zeer goed inlevingsvermogen.”</p>
+						</div>
+					</div>
+					<div class="relative overflow-hidden rounded-xl bg-white p-8 shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)]">
+						<div class="absolute right-6 top-4 select-none font-serif text-8xl text-[#0f6dbf]/10">”</div>
+						<div class="relative z-10">
+							<div class="mb-4 flex items-center justify-between">
+								<span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
+								<span class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-400">Dec. 2025</span>
+							</div>
+							<div class="mb-4 text-xl text-amber-400">★★★★★</div>
+							<p class="text-base italic leading-relaxed text-gray-700">“Hannah neemt echt de tijd voor je. Ze denkt mee, legt goed uit wat er in je lijf gebeurt en heeft daarnaast een luisterend oor. Ze stelt je op je gemak en gaat rustig te werk.”</p>
+						</div>
+					</div>
+					<div class="relative overflow-hidden rounded-xl bg-white p-8 shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)]">
+						<div class="absolute right-6 top-4 select-none font-serif text-8xl text-[#0f6dbf]/10">”</div>
+						<div class="relative z-10">
+							<div class="mb-4 flex items-center justify-between">
+								<span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
+								<span class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-400">Maart 2025</span>
+							</div>
+							<div class="mb-4 text-xl text-amber-400">★★★★★</div>
+							<p class="text-base italic leading-relaxed text-gray-700">“Begripvol, rustig uitleggend en; resultaat!”</p>
+						</div>
+					</div>
+					<div class="relative overflow-hidden rounded-xl bg-white p-8 shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)]">
+						<div class="absolute right-6 top-4 select-none font-serif text-8xl text-[#0f6dbf]/10">”</div>
+						<div class="relative z-10">
+							<div class="mb-4 flex items-center justify-between">
+								<span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
+								<span class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-400">Maart 2025</span>
+							</div>
+							<div class="mb-4 text-xl text-amber-400">★★★★★</div>
+							<p class="text-base italic leading-relaxed text-gray-700">“Bij binnenkomst is het gelijk een oase van rust. Even de trein tot stilstand te laten komen en na een behandeling weer vol energie en adviezen/tips de deur uit te lopen.”</p>
+						</div>
+					</div>
 				</div>
-			</section>
-			<section class="w-[100vw] py-10 items-center flex flex-col xl:flex-row xl:justify-center gap-10">	
-				<div class="xl:w-[40vw] w-[80vw]">							
-					<p class="text-[#0f6dbf]">Begeleiding</p>
-					<p>Soms wil je niet op yogales komen, en weet je niet of zen shiatsu wel het juiste is, maar ervaar je wel dat je vast zit, niet lekker in je vel zit of verward bent. Een gesprek kan dan al veel duidelijkheid geven.</p>
-					<br>
-					<p>Door Hannah’s verfijnde manier van werken en haar sterke intuïtie is elke vorm begeleiding helemaal afgestemd op jou. Jij bent niet degene die moet passen in een behandelmethode, het is de methode die zich aanpast aan jou.</p>
-					<br>
-					<p class="text-[#0f6dbf]">Voorbeeldsituaties voor individuele begeleiding zijn: </p>
-					<ul class="ml-4">
-						<li class="list-disc">steeds weer in dezelfde (negatieve) patronen terecht komen</li>
-						<li class="list-disc">onverklaarbaar emotioneel zijn</li>
-						<li class="list-disc">niet weten wat voor jou belangrijk is in het leven, onduidelijkheid over wat je hier komt doen</li>
-						<li class="list-disc">verlies van een dierbare / relatie / situatie</li>
-					</ul>
-					<br>
-					<p>Hannah heeft veel ervaring met mensen die <span class="font-bold">energetisch verdwaald</span> zijn of een verstoorde energetische huishouding hebben, dat wil zeggen dat jij je heel ijl kan voelen, beroerd wordt van grote groepen mensen, ineens heel moe of beroerd wordt van specifieke personen of plaatsen, en andere soortgelijke situaties. Binnen een paar behandelingen kan hier een grote verbetering in ontstaan.</p>
-					<br>
-					<p>Omdat Hannah veel ervaring heeft met de <span class="font-bold">dood</span>, zowel om haar heen als haar eigen bijna dood ervaringen en het doorstaan van zware ongevallen, is het voor mensen die weten dat ze ongeneeslijk ziek zijn, weten dat ze gaan sterven en angstig zijn voor de dood een enorme opluchting om met Hannah een afspraak te maken. Meerdere mensen zijn na één of twee gesprekken zeer vredig het stervensproces ingegaan.</p>
-					<br>
-					<p>Wil je eerst overleggen of een afspraak zinvol is? Voel je vrij om Hannah te bellen.</p>
-					<br>	
-				</div>
-				<div class="xl:w-[40vw] w-[80vw]">
-					<img src="/shiatsu_buik_50.jpg" alt="" class="xl:w-[40vw] w-[80vw] rounded-lg">
-				</div>
-			</section>
-			<section class="bg-[#f8fbfe] py-16">
-  <div class="flex justify-center">
-    <div class="xl:w-[40vw] w-[80vw]">
-      
-      <h2 class="text-3xl font-bold text-[#0f6dbf] mb-4 text-center">
-        Wat cliënten zeggen
-      </h2>
+			</div>
+		</section>
 
-      <p class="text-center text-gray-600 mb-10 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-        Omdat veel van mijn cliënten elkaar kennen, zijn wegens privacy redenen alle namen op anoniem gezet. 
-        Deze beoordelingen worden door de cliënten zelf geschreven na ontvangst van de factuur en zijn door mij niet te beïnvloeden.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <div class="bg-white p-8 rounded-xl shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)] relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="absolute top-4 right-6 text-8xl text-[#0f6dbf]/10 font-serif select-none">”</div>
-          <div class="relative z-10 h-full flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
-                <span class="text-sm text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Jan. 2026</span>
-              </div>
-              <div class="text-amber-400 text-xl mb-4">★★★★★</div>
-              <p class="text-gray-700 italic text-base leading-relaxed">
-                “Hannah is recht door zee, durft observaties te benoemen, heeft een nuchtere kijk en een zeer goed inlevingsvermogen.”
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)] relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="absolute top-4 right-6 text-8xl text-[#0f6dbf]/10 font-serif select-none">”</div>
-          <div class="relative z-10 h-full flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
-                <span class="text-sm text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Dec. 2025</span>
-              </div>
-              <div class="text-amber-400 text-xl mb-4">★★★★★</div>
-              <p class="text-gray-700 italic text-base leading-relaxed">
-                “Hannah neemt echt de tijd voor je. Ze denkt mee, legt goed uit wat er in je lijf gebeurt en heeft daarnaast een luisterend oor. Ze stelt je op je gemak en gaat rustig te werk.”
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)] relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="absolute top-4 right-6 text-8xl text-[#0f6dbf]/10 font-serif select-none">”</div>
-          <div class="relative z-10 h-full flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
-                <span class="text-sm text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Maart 2025</span>
-              </div>
-              <div class="text-amber-400 text-xl mb-4">★★★★★</div>
-              <p class="text-gray-700 italic text-base leading-relaxed">
-                “Begripvol, rustig uitleggend en; resultaat!”
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl shadow-[0_10px_25px_-5px_rgba(15,109,191,0.1)] relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-          <div class="absolute top-4 right-6 text-8xl text-[#0f6dbf]/10 font-serif select-none">”</div>
-          <div class="relative z-10 h-full flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-lg font-bold text-[#0f6dbf]">Anoniem</span>
-                <span class="text-sm text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Maart 2025</span>
-              </div>
-              <div class="text-amber-400 text-xl mb-4">★★★★★</div>
-              <p class="text-gray-700 italic text-base leading-relaxed">
-                “Bij binnenkomst is het gelijk een oase van rust. Even de trein tot stilstand te laten komen en na een behandeling weer vol energie en adviezen/tips de deur uit te lopen.”
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>	
-			<section class="w-[100vw] py-10 items-center flex flex-col xl:flex-row xl:justify-center gap-10 bg-blue-100">
-				<div class="xl:order-last xl:w-[40vw] w-[80vw]">
-					<p class="text-[#0f6dbf]">Details en Kosten</p>
+		<section class="bg-blue-50">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<div class="max-w-2xl space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Details en kosten</h2>
 					<p>Maak een afspraak door een e-mail te sturen naar info@centerforlife.nl of vul het contactformulier in op de website. Laat je telefoonnummer achter, dan neem ik contact met je op. Dank je wel.</p>
-					<br>
-					<p class="text-[#0f6dbf]">Kosten</p>
-					<p>Een standaard behandeling is 60 minuten en kost € 90,-. <br>De intake is 90 minuten en kost € 110,- .</p>
+					<h3 class="text-xl text-[#0f6dbf]">Kosten</h3>
+					<p>Een standaard behandeling is 60 minuten en kost € 90,-.<br>De intake is 90 minuten en kost € 110,-.</p>
 					<p>Per 15 minuten gaat er €10 van de €90 af of komt het erbij, mocht de behandeling langer of korter duren.</p>
-					<br>
-					<p>Omdat ik lid ben van de beroepsvereniging Shiatsu Vereniging Nederland, krijg je, indien je aanvullend bent verzekerd, meestal €45-50 vergoed per behandeling. Kijk voordat je komt bij je verzekeraar wat je vergoed krijgt.​</p>
-					<br>
-					<p class="text-[#0f6dbf]">Betaling</p>
+					<p>Omdat ik lid ben van de beroepsvereniging Shiatsu Vereniging Nederland, krijg je, indien je aanvullend bent verzekerd, meestal €45-50 vergoed per behandeling. Kijk voordat je komt bij je verzekeraar wat je vergoed krijgt.</p>
+					<h3 class="text-xl text-[#0f6dbf]">Betaling</h3>
 					<p>Aan het einde van de behandeling betaal je contant of via een bankoverschrijving. De factuur krijg je binnen een paar dagen na de behandeling via de mail toegestuurd en kun je indienen bij de verzekeraar.</p>
-					<br>
-					<br>
-					<p class="text-[#0f6dbf]">Algemene voorwaarden en privacy</p>
-					<p>Als je een afspraak maakt ga je akkoord met de algemene voorwaarden en privacy verklaring. Zie deze <a class="text-blue-500" href="/AVG">pagina</a>.</p>
-					<br>
-					<p><b>Voor het maken van een afspraak stuur een email naar info@centerforlife.nl</b></p>
-					<a href="https://centerforlife.clientomgeving.nl/afspraak-maken?"><button class="border rounded-lg p-1 mb-4 bg-[#0f6dbf] text-white hidden">Maak hier een afspraak</button></a>
+					<h3 class="text-xl text-[#0f6dbf]">Algemene voorwaarden en privacy</h3>
+					<p>Als je een afspraak maakt ga je akkoord met de algemene voorwaarden en privacy verklaring. Zie deze <a class="underline" href="/AVG">pagina</a>.</p>
+					<a href={afspraak} class={filledButton}>Stuur een e-mail voor een afspraak</a>
 				</div>
-				<div class="xl:w-[40vw] w-[60vw]">
-					<img src="/shiatsu1_website.png" alt="" class="xl:w-[30vw] w-[80vw] rounded-lg">
-				</div>
-			</section>
-			<section class="w-[100vw] py-10 items-center flex flex-col xl:flex-row xl:justify-center gap-10">
-				<div class="xl:w-[40vw] w-[80vw]">
-					<p class="text-[#0f6dbf]">​Aan doen / meenemen</p>
-					<p>Graag loszittende natuurlijke kleding en schone sokken aandoen of meenemen (ook in de zomer).</p>	
-					<br>
-					<p class="text-[#0f6dbf]">Overige informatie</p>
-					<p>Om je zo goed mogelijk te begeleiden, vraag ik je voorafgaand aan de behandeling bijzonderheden door te geven. Mochten er meerdere aspecten zijn die je graag aandacht wil geven, schrijf ze op een briefje en neem dat mee. Je ontvangt bij de eerste behandeling een behandelovereenkomst, deze sluiten we af omdat dit opgevraagd kan worden door de verzekeraars. Dit is een wettelijk vereiste en een teken van goede zorg. </p>
+				<img src="/opt/shiatsu1_website.webp" alt="Shiatsu" class="w-full rounded-lg" loading="lazy" decoding="async">
+			</div>
+		</section>
+
+		<section>
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<div class="max-w-2xl space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Aan doen / meenemen</h2>
+					<p>Graag loszittende natuurlijke kleding en schone sokken aandoen of meenemen (ook in de zomer).</p>
+					<h2 class="text-2xl text-[#0f6dbf]">Overige informatie</h2>
+					<p>Om je zo goed mogelijk te begeleiden, vraag ik je voorafgaand aan de behandeling bijzonderheden door te geven. Mochten er meerdere aspecten zijn die je graag aandacht wil geven, schrijf ze op een briefje en neem dat mee. Je ontvangt bij de eerste behandeling een behandelovereenkomst, deze sluiten we af omdat dit opgevraagd kan worden door de verzekeraars. Dit is een wettelijk vereiste en een teken van goede zorg.</p>
 					<p>Ik probeer altijd een behandeling zo goed mogelijk binnen 60 minuten af te ronden, maar soms komt het voor dat er iets extra tijd nodig is om een behandeling goed af te ronden. Dit kan bij jou gebeuren, maar ook bij iemand anders. Indien je even moet wachten, alvast bedankt voor je geduld.</p>
-					<br>
 					<p>In het contact met mijn cliënten gelden de bepalingen, beroepscode en klacht- en tuchtregeling van de SVN, SCAG en RBCZ.</p>
-					<br>
-					<p>Eventuele gegevens voor de verzekeraar: </p>
-					<p>AGB-code: 90102718 / AGB-praktijkcode: 90062142</p>
-					<p>Shiatsu Vereniging Nederland nr: 2018035</p>
-					<p>RBCZ nr: 912204R</p>
-					<p>SCAG nr: 18033</p>
-					<p>KvK nr: 56022956</p>
+					<h3 class="text-xl text-[#0f6dbf]">Eventuele gegevens voor de verzekeraar</h3>
+					<ul class="space-y-1">
+						<li>AGB-code: 90102718 / AGB-praktijkcode: 90062142</li>
+						<li>Shiatsu Vereniging Nederland nr: 2018035</li>
+						<li>RBCZ nr: 912204R</li>
+						<li>SCAG nr: 18033</li>
+						<li>KvK nr: 56022956</li>
+					</ul>
+					<div class="flex items-center gap-8 pt-4">
+						<img src="/opt/logoRBCZ.webp" class="h-16 w-auto" alt="RBCZ" width="480" height="232" loading="lazy" decoding="async">
+						<img src="/opt/logoSVN.webp" class="h-16 w-auto" alt="Shiatsu Vereniging Nederland" width="480" height="190" loading="lazy" decoding="async">
+					</div>
 				</div>
-				<div class="xl:w-[40vw] w-[60vw]">
-					<img src="/shiatsu2_website.png" alt="" class="xl:w-[30vw] w-[80vw] rounded-lg mb-4">
-				</div>
-			</section>
-			<div class="w-[80vw] flex justify-around">
-					<img src="logoRBCZ.jpg" class="w-[20%]" alt="">
-					<img src="logoSVN.jpg" class="w-[20%]" alt="">
-				</div>
-		</div>
-  	 
+				<img src="/opt/shiatsu2_website.webp" alt="Shiatsu behandeling" class="w-full rounded-lg" loading="lazy" decoding="async">
+			</div>
+		</section>
+
+		<Footer />
 	</main>
-<Footer />
 </Layout>

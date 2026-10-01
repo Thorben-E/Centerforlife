@@ -1,135 +1,172 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/Footer.astro';
+
+const maandabonnementUrl = 'https://buy.stripe.com/5kQbJ18EygjCe5o0VJeZ201';
+const filledButton = 'inline-block rounded-lg bg-[#0f6dbf] px-4 py-2 text-white';
+const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-white px-4 py-2 text-[#0f6dbf]';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="flex flex-col justify-center items-center">
-		<div class="flex flex-col gap-4">
-			<section class="w-[100vw] flex flex-col items-center xl:flex-row xl:justify-center gap-10">
-				<div class="xl:w-[40vw] w-[80vw]">
-					<h1 class="text-4xl my-10 text-[#0f6dbf]">Yoga</h1>
-					<p> Ieder lichaam streeft naar gezondheid, altijd, ook jouw lijf. Je hebt een gezond lichaam nodig om vreugdevol met voldoening jouw leven te leven. Alles staat of valt met je gezondheid. <br>Door yoga te volgen bij Center for Life wordt jij je er weer bewust van dat je lichaam je belangrijkste instrument is, leer je te voelen wat je lichaam nodig heeft en hoe jij de gezondheid van je lichaam praktisch ondersteunt.</p>
-					<br>
-					<p>Hannah zet als zeer ervaren senior yogadocent <strong>Qi gong, de Kaiut Yoga Methode en werken met het fascie in.</strong> Daarnaast zorgt haar grote mate van <strong>bewustzijn</strong> voor een enorme diepgang in de lessen. <em>Qi gong</em> om de levensenergie lekker in beweging te zetten, de <em>Kaiut Methode</em> om het lichaam beter te laten functioneren naarmate je ouder wordt en <i>fasciewerk</i> om een totale integratie te laten plaatsvinden.</p>
-					<br>
-					<p>Dit sluit prachtig aan bij de manier waarop Hannah kijkt naar het herstellen van de natuurlijke gezondheid: een ontspannen zenuwstelsel, goede circulatie, een goed samenwerkend bewegingsapparaat (skelet, spieren en pezen), een vrij bindweefsel (fascie) en goed leren voelen en luisteren naar je lichaam, zijn volgens haar de sleutels.</p>
-					<br>
-					<p>Het is voor ieder mens belangrijk om dit te ervaren. Dit maakt dat Hannah’s lessen voor iedereen, in welke staat dan ook, passend zijn. Iedereen werkt op zijn eigen niveau. Het is een yogavorm voor elk lichaam, voor iedereen, van iedere leeftijd. Volg een proefles en je begrijpt wat ik bedoel!</p>
-					<br>
-					<p><b class="text-[#0f6dbf]">Met als resultaat dat:</b></p>
-					<!-- list stijl -->
-					<ul class="list-disc ml-4">
-					  <li>je skelet beter uitlijnt en je houding verbetert</li>
-					  <li>het hele bewegingsapparaat beter functioneert (ook de gewrichten)</li>
-					  <li>het helend vermogen van het lichaam wordt ondersteund</li>
-					  <li>ontspanning vergroot en spanning vermindert</li>
-					  <li>je stevig verbonden raakt met je lijf (in plaats van je hoofd)</li>
-					  <li>je slaap verbetert</li>
-					  <li>circulatie en ademhaling verbetert</li>
-					  <li>bewustzijn vergroot</li>
-					  <li>je er blij van wordt!</li>
+<Layout title="Work-In">
+	<main>
+		<section class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="space-y-4">
+				<h1 class="text-4xl text-[#0f6dbf]">Work-In</h1>
+				<p class="text-2xl text-[#0f6dbf]">Van Overleven naar Belichaamde Rust & Vitaliteit</p>
+				<p>Blijf je stress analyseren met je hoofd, maar voelt je lichaam nog steeds strak, gejaagd of vermoeid?</p>
+				<p>Je bent reflectief en hebt al veel aan persoonlijke ontwikkeling gedaan. Je snapt mentaal waar je stress of spanning vandaan komt. En toch… blijft die knoop in je maag, je vastzittende nek of rug, die diepe onderhuidse vermoeidheid of piekergedachten aanwezig.</p>
+				<p>Praten lost spanning op celniveau niet op. Je zenuwstelsel luistert niet naar logica, maar naar veiligheid.</p>
+			</div>
+			<img src="/opt/workin-raam.webp" alt="Work-In les in de studio bij het raam" class="w-full rounded-lg" width="1024" height="768" decoding="async">
+		</section>
+
+		<section class="bg-blue-50">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Herken je dit?</h2>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>Het ‘wandelend hoofd’-syndroom:</strong> Je leeft en denkt vanuit je ratio, analyseert alles, maar bent het contact met je lichaam kwijt.</li>
+					<li><strong>Chronische overprikkeling:</strong> Je zenuwstelsel staat constant ‘aan’ (gejaagdheid) of raakt juist emotioneel verdoofd en futloos (freeze-respons).</li>
+					<li><strong>Fysieke restricties & vermoeidheid:</strong> Terugkerende rug-, nek- of bekkenklachten en een oppervlakkige ademhaling die niet weggaan met reguliere fysio.</li>
+					<li><strong>Niet meer écht kunnen ontspannen:</strong> Je neemt wel rust of slaapt wel, maar je wordt niet meer uitgerust wakker.</li>
+				</ul>
+			</div>
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Voor wie is Work-In bedoeld?</h2>
+				<p>De Work-In is een bewuste stap voorbij oppervlakkige trends of snelle fitness-yoga. Deze lessen zijn speciaal ontwikkeld voor:</p>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>De overbelaste professional:</strong> Die de controle wil loslaten en behoefte heeft aan een diepe zenuwstelsel-reset.</li>
+					<li><strong>De zoekende patiënt:</strong> Die voelt dat fysieke klachten (rug, nek, darmen) een diepere, opgeslagen oorzaak hebben.</li>
+					<li><strong>De bewuste groeier:</strong> Die zoekt naar onderbouwde diepgang, de Tao, en het lichaam wil leren begrijpen als spiegel.</li>
+				</ul>
+			</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<div class="space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Wat is Work-In?</h2>
+					<p>Een Work-In is geen work-out waar je jezelf afmat of doelloos rekt. Het is een diepgaande herprogrammering van het zenuwstelsel en het herstellen van je natuurlijke levensenergie (Qi).</p>
+					<p>Het vormt een door Hannah gecreëerde unieke synergie van Qi Gong, meerdere yogastijlen, TAO werk en de Eric Franklin Methode.</p>
+					<p>Gedragen door 25 jaar ervaring en 10.000+ uur praktijkervaring in lesgeven, individuele Shiatsu behandelingen, en het organiseren van transformerende retraites, yogadagen en masterclasses.</p>
+					<h3 class="text-xl text-[#0f6dbf]">Westerse medische veiligheid ontmoet Oosterse diepgang</h3>
+					<ul class="list-disc space-y-2 pl-5">
+						<li><strong>Zenuwstelsel-regulatie:</strong> We kalmeren de nervus vagus, waardoor je zenuwstelsel het signaal krijgt dat het weer veilig is.</li>
+						<li><strong>Fascia Release & Biomechanica:</strong> We werken diep in de weefsels en gewrichten om verkeerde houdings- en compensatiepatronen op te heffen.</li>
+						<li><strong>Taoïstische Levenskunst (Wu Wei):</strong> Je leert de kunst van ‘doen door niet te doen’—excelleren en bewegen vanuit ontspanning in plaats van pushen.</li>
+						<li><strong>Het Lichaam als Spiegel:</strong> Je leert fysieke signalen te vertalen naar persoonlijke groei in je dagelijkse leven.</li>
 					</ul>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Ervaring van Marieke:</strong><i>"Ik heb al veel yogadocenten gehad, maar Hannah is echt heel erg goed in wat ze doet. Ze weet precies wat er tijdens houdingen in het lichaam gebeurt en helpt mij veel beter voelen wat ik voor mijn lichaam kan doen om het beter te laten worden."</i></p>
-					<br>
-					<p>Tot gauw in de praktijk of op een evenement!</p>
-					<br>
-					<a target="_blank" href="https://buy.stripe.com/14A8wP3kec3mbXg8obeZ203" class="border rounded-lg p-2 bg-[#0f6dbf] text-white">Boek een proefles</a>
-					<br>
-					<br>
-					<p>Let op: als je een proefles in de studio wil volgen, stuur een email naar <a>info@centerforlife.nl</a> De lessen zijn in principe online. Hannah geeft af en toe les in Nederland, wil je daarbij zijn? Neem dan contact met haar op.</p>
+					<p class="border-l-4 border-[#0f6dbf] pl-4"><i>“Ik heb al veel yogadocenten gehad, maar Hannah is echt heel erg goed in wat ze doet. Ze weet precies wat er tijdens houdingen in het lichaam gebeurt en helpt mij veel beter voelen wat ik voor mijn lichaam kan doen om het beter te laten worden.”</i> — Marieke</p>
+					<p class="border-l-4 border-[#0f6dbf] pl-4"><i>Hannah: “Je lichaam is de enige plek waar je altijd in woont. Ik leer je hoe je die woning weer comfortabel, veilig en vitaal maakt.”</i></p>
 				</div>
-				<div class="xl:w-[40vw] w-[80vw]">
-					<img src="/studio_velp_website.png" alt="" class="xl:w-[37vw] w-[80vw] rounded-lg">
+				<div class="space-y-4">
+					<img src="/opt/workin-spiegel.webp" alt="Work-In les in de studio" class="w-full rounded-lg" width="1024" height="768" loading="lazy" decoding="async">
+					<img src="/opt/workin-voeten.webp" alt="Collage van voeten tijdens de Work-In les" class="w-full rounded-lg" width="1024" height="775" loading="lazy" decoding="async">
 				</div>
-			</section>
-			<section class="w-[100vw] py-10 items-center flex flex-col xl:flex-row xl:justify-center gap-10 bg-blue-100">
-				<div class="xl:order-last xl:w-[40vw] w-[80vw]">
-					<h1 class="text-4xl mt-10 mb-10 text-[#0f6dbf]">Yoga details</h1>
-					<p>In juli en augustus geldt het Zomer Rooster: er zijn 3 ipv 5 lessen per week:</p>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Lesrooster:</strong></p>
-					<ul>
-					  <li>maandag: 19:45u Yogales</li>
-					  <li>woensdag: 19:45u Yogales</li>
-					  <li>vrijdag: 09:00u Yogales</li>
-					</ul>
-					<br>
-					<p class="text-[#0f6dbf]"><b>Wanneer is er de komende weken wel / geen les EN wanneer ben ik in Velp:</b></p>
-					<ul class="list-disc ml-4">
-						<li>week 29 (week van ma 13 juli): WEL yoga</li>
-						<li>week 30 (week van ma 20 juli): WEL yoga - maar geen les op vrijdag 24 juli</li>
-						<li>week 31 (week van ma 27 juli): GEEN yoga</li>
-						<li>week 32: (week van ma 3 aug): GEEN yoga</li>
-						<li>week 33 (week van ma 10 aug): WEL yoga - ik ben in Velp</li>
-						<li>week 34 (week van ma 17 aug): WEL yoga</li>
-						<li>week 35 (week van ma 24 aug): GEEN yoga</li>
-						<li>week 36 (week van ma 31 aug): WEL yoga</li>
-					</ul>
-					<p><b>✨ Vanaf 7 september (week 37) stopt het zomerrooster  ✨</b></p>
-					<br>
-					<p><b class="text-[#0f6dbf]">Er zijn 4 mogelijkheden om les te volgen:</b></p>
-					<ol class="list-disc ml-4">
-					  <li>in de studio in Velp en laat je begeleiden door Hannah live of via ZOOM</li>
-					  <li>bij jou thuis via Zoom en laat je begeleiden door Hannah</li>
-					  <li>onbeperkt, helemaal op jouw tijd, via de opgenomen lessen in de yoga-bibliotheek, hiertoe krijg je toegang als je een abonnement afsluit</li>
-					  <li>kom naar de Yoga Intensive dagen om Hannah persoonlijk te ontmoeten, en je eigen yoga te verdiepen (zie Events)</li>
-					</ol>
-					<br>
-					<p>Zo kan je les volgen wanneer je wil!</p>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Hoe werkt de yogales online via ZOOM?</strong><br> Zie FAQ, hierin wordt in stapjes beschreven hoe je in de les komt. En kom je er niet uit, neem dan contact op.</p>
-					<br>	
-						
+			</div>
+		</section>
+
+		<section class="bg-blue-50">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Wat het je oplevert</h2>
+				<h3 class="text-xl text-[#0f6dbf]">Op korte termijn</h3>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>Directe fysiologische rust:</strong> Je schakelt over van de overlevingsstand naar het herstelstelsel.</li>
+					<li><strong>Ruimte in je lijf:</strong> Direct merkbare verlichting in nek, schouders, rug en bekken.</li>
+					<li><strong>Minder piekeren:</strong> Je zakt direct uit je hoofd en ervaart een heldere, innerlijke rust.</li>
+				</ul>
+				<h3 class="text-xl text-[#0f6dbf]">Op lange termijn</h3>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>Duurzame Vitaliteit (Longevity):</strong> Een veerkrachtig, gezond en soepel lichaam dat niet slijt, maar meegaat.</li>
+					<li><strong>Emotionele Balans:</strong> Oude opgeslagen spanningen en blokkades smelten duurzaam weg.</li>
+					<li><strong>Belichaamde Wijsheid:</strong> Beslissingen nemen op basis van je intuïtie en onderbuikgevoel in plaats van angst of kramp.</li>
+				</ul>
+			</div>
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Maak gratis en vrijblijvend kennis</h2>
+				<p>Om te ervaren of de Work-In aansluit bij wat jouw lichaam op dit moment nodig heeft, bied ik een persoonlijk instaptraject aan:</p>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>Persoonlijk Kennismakingsgesprek:</strong> We stemmen vooraf af wat je klachten, behoeften en doelen zijn.</li>
+					<li><strong>2 Gratis Proeflessen:</strong> Ervaar daarna 2 lessen kosteloos om de diepgaande werking van de Work-In aan den lijve te ondervinden.</li>
+				</ul>
+				<div class="flex flex-col items-start gap-3 pt-2">
+					<a href="/contact?onderwerp=2%20gratis%20proeflessen%20en%20kennismaking" class={filledButton}>Ja, ik wil 2 gratis proeflessen & kennismaking aanvragen</a>
+					<p>Ik blijf graag op de hoogte van Hannah’s werk:</p>
+					<a href="#nieuwsbrief" class={outlineButton}>Inschrijven nieuwsbrief</a>
 				</div>
-				<img src="/9_20220823_215651 (1).jpg" alt="" class="xl:w-[40vw] w-[80vw] rounded-lg">
-			</section>
-			<section class="w-[100vw] flex flex-col items-center xl:flex-row xl:justify-center gap-10">
-				<div class="xl:w-[40vw] w-[80vw] py-10">
-					<p><strong class="text-[#0f6dbf]">Proefles</strong><br> Wil je eerst kennis maken? Je bent van harte welkom!</p>
-					<p>De yogastijl die Hannah ontwikkeld heeft is een diepwerkende yogavorm. Daarom raad ze je aan om 3 proeflessen te boeken. De eerste keer is voor de meeste mensen zo nieuw, dat ze vaak nog niet de volle potentie van de lessen kunnen ervaren.</p>
-					<br>
-					<p>Het persoonlijke aspect van yogales vindt Hannah erg belangrijk, en daarom heeft ze kort kennismakingsgesprek voorafgaand aan de eerste les. Geef hierbij aan waar je behoefte aan hebt, voor een optimale begeleiding hoe ik je het beste kan begeleiden. Heb je een proefles geboekt, dan neem ik contact met je op. Leuk om elkaar te ontmoeten!</p>
-					<br>
-					<br>
-					<a target="_blank" href="https://buy.stripe.com/14A8wP3kec3mbXg8obeZ203" class="border rounded-lg p-2 bg-[#0f6dbf] text-white">Boek een proefles</a>
-					<br>
-					<br>
-					<p>Kosten proefles: €15</p>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Maand Abonnement</strong><br> Zijn de proeflessen goed bevallen, dan sluit je een maand abonnement af. <br>Kom je naar de studio? Dan sluit je via Hannah een abonnement af. <br>Wil je graag online meedoen: sluit hier je maandabonnement af:</p>
-					<a target="_blank" href="https://buy.stripe.com/5kQbJ18EygjCe5o0VJeZ201"><button class="border rounded-lg my-4 p-2 bg-[#0f6dbf] text-white">Maand abonnement afsluiten</button></a>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Prijzen vanaf 1 Januari 2026:</strong></p>
-					<ul class="list-disc ml-4">
-					  <li>maandabonnement onbeperkt live online les en toegang tot de lesbibliotheek: €50</li>
-					  <li>maandabonnement 1 x per week les in de studio en onbeperkt online les en toegang tot de lesbibliotheek: €60</li>
+			</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Wanneer is er les?</h2>
+				<h3 class="text-xl text-[#0f6dbf]">Lesrooster</h3>
+				<ul class="list-disc space-y-1 pl-5">
+					<li>maandag: 19:00u en 20:30u les</li>
+					<li>woensdag: 19:00u en 20:30u les</li>
+					<li>vrijdag: 9:00u les</li>
+				</ul>
+				<p>Een les duurt 75 minuten.</p>
+				<h3 class="text-xl text-[#0f6dbf]">Er zijn 4 mogelijkheden om les te volgen</h3>
+				<ul class="list-disc space-y-2 pl-5">
+					<li>De lessen worden (live) online gegeven, je mag zo vaak mogelijk in de week meedoen als je wil. Ik kijk met je mee waar je de houding zou kunnen aanpassen en wat er goed gaat.</li>
+					<li>Als ik in Nederland ben, is het mogelijk om in de studio met mij een les te volgen. Via de nieuwsbrief laat ik weten wanneer ik in Nederland ben.</li>
+					<li>Als je een abonnement afneemt, krijg je toegang tot de “lessen bibliotheek”. Dit is een online map waarin heel veel lessen staan die eerder gegeven zijn (en opgenomen). Daar kan je altijd gebruik van maken.</li>
+					<li>Ook geef ik Masterclasses in Nederland. Dit is de perfecte manier om dieper in je practice te duiken, vragen te stellen, een laag dieper, verder of zachter te komen. Ook krijg je dan informatie die je gezondheid echt ten goede komt! De masterclasses voor het najaar 2026 zijn volgeboekt. Wil je meedoen in het voorjaar (plekken zijn beperkt), schrijf je in voor de <a href="#nieuwsbrief" class="underline">nieuwsbrief</a> (zie onderaan de pagina), dan kan je je als eerste inschrijven.</li>
+				</ul>
+				<p>Zo kan je les volgen wanneer je wil!</p>
+				<p><strong class="text-[#0f6dbf]">Hoe werkt de Work-In online via ZOOM?</strong><br> Zie FAQ, hierin wordt in stapjes beschreven hoe je in de les komt. En kom je er niet uit, neem dan contact op.</p>
+			</div>
+			<div class="space-y-4">
+				<h2 class="text-2xl text-[#0f6dbf]">Abonnement opties</h2>
+				<p>Bevallen de proeflessen goed? Stap eenvoudig over op een flexibel maandabonnement.</p>
+				<h3 class="text-xl text-[#0f6dbf]">Onbeperkt Maandabonnement (€ 50 / maand)</h3>
+				<p>Haal het maximale uit je work-ins! Met dit abonnement doe je onbeperkt mee met alle live lessen én krijg je 24/7 volledige toegang tot onze complete lesbibliotheek. Ideaal als je met regelmaat wilt bewegen en het meeste uit je trainingen wilt halen.</p>
+				<p>Meedoen? Regel het binnen één minuut:</p>
+				<a target="_blank" href={maandabonnementUrl} class={outlineButton}>Ja, ik wil een maandabonnement</a>
+				<h3 class="text-xl text-[#0f6dbf]">Losse Les (€ 20 per les)</h3>
+				<p>Train je liever zonder vast te zitten aan een abonnement? Kies dan voor een losse les. Perfect voor wie maximale vrijheid zoekt of af en toe een lesje wil meepakken.</p>
+				<a id="losse-les" href="/contact?onderwerp=Losse%20les%20boeken" class={outlineButton}>Ja, ik wil een losse les boeken</a>
+				<h3 class="text-xl text-[#0f6dbf]">Het online volgen van de lessen biedt een aantal unieke voordelen</h3>
+				<ul class="list-disc space-y-2 pl-5">
+					<li><strong>Oefenen in je eigen fijne plek:</strong> Je volgt de les gewoon vanuit huis, in je eigen vertrouwde en rustige omgeving. Geen reistijd, geen gehaast in het verkeer en direct na de les kun je heerlijk ontspannen op je eigen bank of bed.</li>
+					<li><strong>Persoonlijke en individuele aandacht:</strong> Ondanks dat de lessen online zijn, kijkt Hannah nauwkeurig met iedereen individueel mee. Ze geeft gerichte aanwijzingen en correcties waar nodig, waardoor je de oefeningen veilig en effectief uitvoert.</li>
+					<li><strong>Optimale innerlijke focus:</strong> Je hoeft nauwelijks naar het scherm te kijken. Hannah doet de oefeningen bijna niet voor, maar begeleidt je met duidelijke, heldere instructies. Hierdoor kun je gewoon je ogen sluiten, je volledig laten leiden door haar stem en heel diep bij jezelf en in je eigen lichaam blijven.</li>
+					<li><strong>Maximale privacy en comfort:</strong> Omdat je in je eigen ruimte bent, hoef je je geen zorgen te maken over hoe je eruitziet of wat anderen doen. Je schiet niet in de vergelijking en traint op jouw eigen niveau en tempo, zonder afleiding van een drukke studioruimte.</li>
+					<li><strong>Lage drempel en flexibiliteit:</strong> Je rolt bij wijze van spreken zo vanuit je dagelijkse bezigheden op je matje. Het kost minder tijd rondom de les, waardoor het makkelijker in te passen is in je drukke weekschema.</li>
+					<li><strong>Overal te volgen:</strong> Ben je op vakantie of logeer je ergens? Je kan vanuit elke locatie meedoen met de les.</li>
+				</ul>
+			</div>
+			</div>
+		</section>
+
+		<section class="bg-blue-50">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+				<div class="space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Materialen die we gebruiken tijdens de les</h2>
+					<p>We gebruiken een mat, bolster, riem en blok, zie foto en zie FAQ voor details en alternatieven.</p>
+					<h2 class="text-2xl text-[#0f6dbf]">Lesoverzicht 2026</h2>
+					<p>Er is elke week les, behalve:</p>
+					<ul class="list-disc space-y-1 pl-5">
+						<li>2 weken in de Kerstvakantie</li>
+						<li>4 weken in de zomervakantie (tijdens de zomervakantie is er in de overige weken een zomerrooster met 3 lessen in de week in plaats van 5)</li>
+						<li>1 of 2 weken per jaar volg ik een training en is er geen les</li>
 					</ul>
-					<p>Als je geen maandabonnement afsluit, kost een losse les 20 euro.</p>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Materialen die we gebruiken tijdens de les</strong><br> We gebruiken een mat, bolster, riem en blok, zie foto en zie FAQ voor details en alternatieven.</p>
-					<br>
-					<p><b class="text-[#0f6dbf]">Lesoverzicht 2026</b></p>	
-					<b><p>Er is elke week les, behalve op de volgende dagen:</p></b>
-					<ul>
-						<li>maandag 16 t/m 20 februari</li>
-						<li>maandag 6 april (2e Paasdag)</li>
-						<li>vrijdag 15 mei</li>
-						<li>vrijdag 5 juni</li>
-						<li>maandag 8 juni t/m 12 juni</li>
-						<li>(Er is <b>wel </b>les op Goede Vrijdag 3 april)</li>
-					</ul>
-					<br>
-					<p>Als op jouw lesmoment de les uitvalt, voel je vrij om in die week op een ander moment de les in te halen. Wel graag van tevoren afstemmen via mail of whatsapp. Dank je wel.</p>
-					<br>
-					<p><strong class="text-[#0f6dbf]">Meer informatie?</strong><br> Behoefte meer informatie? Behoefte aan individuele lessen? Behoefte aan yoga op andere locatie? Yoga inpassen in een workshop of retraite? Er is veel mogelijk, voel je vrij om te vragen.</p>	
-					<p>Neem contact op via info@centerforlife.nl Tot bij de (online) les, de Yoga Intensives of een retraite!</p>
+					<p>Als er een les uitvalt, laat ik dat vooraf per e-mail weten en kondig ik dat aan in de lessen. Je kunt die week dan een les volgen uit de “lessen bibliotheek”.</p>
+					<p>Ga je zelf op vakantie? Geen probleem! Je volgt dan les vanaf je vakantie of je haalt de gemiste les na je vakantie in door bijvoorbeeld een keer twee lessen in één week te volgen.</p>
+					<p>Dat is het fijne van online les: flexibel en op jouw tempo.</p>
+					<h2 class="text-2xl text-[#0f6dbf]">Meer informatie?</h2>
+					<p>Behoefte aan meer informatie? Yoga inpassen in een workshop of retraite? Er is veel mogelijk, voel je vrij om te vragen.</p>
+					<p>Neem contact op via <a href="mailto:info@centerforlife.nl" class="underline">info@centerforlife.nl</a></p>
 				</div>
-				<div class="xl:w-[40vw] w-[80vw]">
-					<img src="/yoga3.png" alt="" class="xl:w-[30vw] w-[80vw] rounded-lg">
-			</section>
-		</div>
-		<Footer />	
+				<img src="/opt/yoga3.webp" alt="Materialen voor de les" class="w-full rounded-lg" loading="lazy" decoding="async">
+			</div>
+		</section>
+
+		<Footer />
 	</main>
 </Layout>

@@ -1,67 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/Footer.astro';
-const hannahImage = '/foto_peggy.jpg'
-const yogaImage = '/7_yoga_armen_omhoog.jpg'
-const programmaImage = '/12_arashiyama-bamboo-grove.jpg'
-const eventsImage = '/1_Moodz-Spa-Resort_zwembad_boven.jpg'
 ---
 
 <Layout title=''>
 	<main>
-		<section class="flex items-center">
-			<div class="flex flex-col sm:flex-row text-blue-700 h-[90vh] w-screen relative">
-				
-				<div class="relative h-1/2 sm:w-1/2 sm:h-full order-3">
-        	<img src="shiatsu2.jpg" alt="Shiatsu Image" class="object-cover h-full w-full filter brightness-[0.75]">
-        	<div class="absolute inset-0 flex items-center justify-center">
-						<a href="/shiatsu" class=" text-white py-2 px-4 text-4xl rounded-lg hover:text-5xl transition-all duration-500">
-      	  	  Ga naar Shiatsu
-       		 	</a>
-        	</div>
-      	</div>
-				
-				<!-- White Line -->
-				<div class="w-full h-1 sm:w-1 sm:h-full bg-white order-2"></div>  
-				
-				<div class="relative h-1/2 sm:w-1/2 sm:h-full order-1">
-    	    <img src="/studio_velp_website.png" alt="Shiatsu Image" class="h-full object-cover w-full brightness-[0.75]">
-     		  <div class="absolute inset-0 flex items-center justify-center">
-					<a href="/yoga" class=" text-white py-2 px-4 text-4xl rounded-lg hover:text-5xl transition-all duration-500">
-        	  Ga naar Yoga
-        	</a>
-        </div>
-
-			</div>
-			<div id="cookieWrapper" class="hidden bg-[#f7f7f7] fixed bottom-5 left-5 max-w-[300px] w-[50vw] flex flex-col items-center border p-4 rounded-2xl">
-				<img src="cookie.png" alt="couldn't load img" class="w-[30%]">
-				<div class="flex flex-col gap-2">
-					<header class="text-xl">Cookies Consent</header>
-					<p class="text-sm text-gray-600">This website use cookies to ensure you get the best experience on our website</p>
-					<div class="flex gap-2 items-center">
-						<button class="border p-2" id="cookieBtn">I understand</button>
-					</div>
-				</div>
-			</div>
+		<div class="flex min-h-[calc(100svh-12vh)] flex-col">
+		<section class="grid min-h-0 w-full flex-1 grid-rows-2 gap-1 sm:grid-cols-2 sm:grid-rows-1">
+			<a href="/yoga" class="relative block h-full min-h-0 overflow-hidden">
+				<img src="/opt/studio_velp_website.webp" alt="Studio in Velp" class="absolute inset-0 h-full w-full object-cover brightness-[0.75]" fetchpriority="high" decoding="async">
+				<span class="relative z-10 flex h-full w-full items-center justify-center px-6 text-center text-white">
+					<span>
+						<span class="block text-3xl sm:text-4xl">Ga naar Work-In</span>
+						<span class="mt-2 block text-lg font-normal">Online lessen</span>
+					</span>
+				</span>
+			</a>
+			<a href="/shiatsu" class="relative block h-full min-h-0 overflow-hidden">
+				<img src="/opt/shiatsu2.webp" alt="Shiatsu behandeling" class="absolute inset-0 h-full w-full object-cover brightness-[0.75]" fetchpriority="high" decoding="async">
+				<span class="relative z-10 flex h-full w-full items-center justify-center px-6 text-center text-white">
+					<span>
+						<span class="block text-3xl sm:text-4xl">Ga naar Shiatsu</span>
+						<span class="mt-2 block text-lg font-normal">Behandeling</span>
+					</span>
+				</span>
+			</a>
 		</section>
-	
+		<div id="cookieWrapper" class="hidden">
+			<div class="flex items-center justify-center gap-4 border-t bg-[#f7f7f7] px-4 py-3 text-center">
+				<p class="text-sm text-gray-700">Deze website gebruikt cookies om de site goed te laten werken.</p>
+				<button class="rounded border border-[#0f6dbf] px-3 py-1 text-[#0f6dbf]" id="cookieBtn" type="button">Akkoord</button>
+			</div>
+		</div>
+		<a href="#nieuwsbrief" class="bg-[#0f6dbf] py-3 text-center text-white">Inschrijven nieuwsbrief</a>
+		</div>
+		<Footer />
 	</main>
 </Layout>
 
 <script>
 	const cookieBox = document.getElementById('cookieWrapper');
-	const acceptBtn = document.getElementById('cookieBtn')
+	const acceptBtn = document.getElementById('cookieBtn');
 
 	acceptBtn.onclick = () => {
-		document.cookie = "CookieBy=Centerforlife; max-age="+60*60*24*30
+		document.cookie = "CookieBy=Centerforlife; max-age=" + 60 * 60 * 24 * 30;
 		if (document.cookie) {
-			cookieBox.classList.toggle('hidden')
+			cookieBox.classList.add('hidden');
 		} else {
-			alert("Cookie can't be set!")
+			alert("Cookie kan niet geplaatst worden.");
 		}
-	}
+	};
+
 	if (!document.cookie) {
-		cookieBox.classList.toggle('hidden')
+		cookieBox.classList.remove('hidden');
 	}
-	
 </script>
