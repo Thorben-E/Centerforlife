@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/yoga",
+      "destination": "/workin",
+      "permanent": true
+    }
+  ]
+}
