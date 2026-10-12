@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/Footer.astro';
 
 const maandabonnementUrl = 'https://buy.stripe.com/5kQbJ18EygjCe5o0VJeZ201';
+const losseLesUrl = 'https://buy.stripe.com/4gM3cvf2WaZi7H0gUHeZ20d';
 const filledButton = 'inline-block rounded-lg bg-[#0f6dbf] px-4 py-2 text-white';
 const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-white px-4 py-2 text-[#0f6dbf]';
 ---
@@ -21,7 +22,7 @@ const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-whit
 		</section>
 
 		<section class="bg-blue-50">
-			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-12 lg:grid-cols-2">
 			<div class="space-y-4">
 				<h2 class="text-2xl text-[#0f6dbf]">Herken je dit?</h2>
 				<ul class="list-disc space-y-2 pl-5">
@@ -40,6 +41,9 @@ const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-whit
 					<li><strong>De bewuste groeier:</strong> Die zoekt naar onderbouwde diepgang, de Tao, en het lichaam wil leren begrijpen als spiegel.</li>
 				</ul>
 			</div>
+			</div>
+			<div class="mx-auto max-w-6xl px-6 pb-12 pt-10">
+				<img src="/opt/workin-groep.webp" alt="Groep volgt een Work-In les in de studio, zittend op bolsters terwijl Hannah uitleg geeft" class="w-full rounded-lg" width="1024" height="513" loading="lazy" decoding="async">
 			</div>
 		</section>
 
@@ -69,7 +73,7 @@ const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-whit
 		</section>
 
 		<section class="bg-blue-50">
-			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 lg:grid-cols-2">
+			<div class="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-12 lg:grid-cols-2">
 			<div class="space-y-4">
 				<h2 class="text-2xl text-[#0f6dbf]">Wat het je oplevert</h2>
 				<h3 class="text-xl text-[#0f6dbf]">Op korte termijn</h3>
@@ -98,6 +102,9 @@ const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-whit
 					<a href="#nieuwsbrief" class={outlineButton}>Inschrijven nieuwsbrief</a>
 				</div>
 			</div>
+			</div>
+			<div class="mx-auto max-w-2xl px-6 pb-12 pt-10">
+				<img src="/opt/workin-yogadag.webp" alt="Collage van een yogadag: liggende houdingen, buiten oefenen, en de groep samen" class="w-full rounded-lg" width="1024" height="1024" loading="lazy" decoding="async">
 			</div>
 		</section>
 
@@ -131,17 +138,22 @@ const outlineButton = 'inline-block rounded-lg border-2 border-[#0f6dbf] bg-whit
 				<a target="_blank" href={maandabonnementUrl} class={outlineButton}>Ja, ik wil een maandabonnement</a>
 				<h3 class="text-xl text-[#0f6dbf]">Losse Les (€ 20 per les)</h3>
 				<p>Train je liever zonder vast te zitten aan een abonnement? Kies dan voor een losse les. Perfect voor wie maximale vrijheid zoekt of af en toe een lesje wil meepakken.</p>
-				<a id="losse-les" href="/contact?onderwerp=Losse%20les%20boeken" class={outlineButton}>Ja, ik wil een losse les boeken</a>
-				<h3 class="text-xl text-[#0f6dbf]">Het online volgen van de lessen biedt een aantal unieke voordelen</h3>
-				<ul class="list-disc space-y-2 pl-5">
-					<li><strong>Oefenen in je eigen fijne plek:</strong> Je volgt de les gewoon vanuit huis, in je eigen vertrouwde en rustige omgeving. Geen reistijd, geen gehaast in het verkeer en direct na de les kun je heerlijk ontspannen op je eigen bank of bed.</li>
-					<li><strong>Persoonlijke en individuele aandacht:</strong> Ondanks dat de lessen online zijn, kijkt Hannah nauwkeurig met iedereen individueel mee. Ze geeft gerichte aanwijzingen en correcties waar nodig, waardoor je de oefeningen veilig en effectief uitvoert.</li>
-					<li><strong>Optimale innerlijke focus:</strong> Je hoeft nauwelijks naar het scherm te kijken. Hannah doet de oefeningen bijna niet voor, maar begeleidt je met duidelijke, heldere instructies. Hierdoor kun je gewoon je ogen sluiten, je volledig laten leiden door haar stem en heel diep bij jezelf en in je eigen lichaam blijven.</li>
-					<li><strong>Maximale privacy en comfort:</strong> Omdat je in je eigen ruimte bent, hoef je je geen zorgen te maken over hoe je eruitziet of wat anderen doen. Je schiet niet in de vergelijking en traint op jouw eigen niveau en tempo, zonder afleiding van een drukke studioruimte.</li>
-					<li><strong>Lage drempel en flexibiliteit:</strong> Je rolt bij wijze van spreken zo vanuit je dagelijkse bezigheden op je matje. Het kost minder tijd rondom de les, waardoor het makkelijker in te passen is in je drukke weekschema.</li>
-					<li><strong>Overal te volgen:</strong> Ben je op vakantie of logeer je ergens? Je kan vanuit elke locatie meedoen met de les.</li>
-				</ul>
+				<a id="losse-les" target="_blank" href={losseLesUrl} class={filledButton}>Ja, ik wil een losse les boeken</a>
 			</div>
+			</div>
+			<div class="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-12 pt-16 lg:grid-cols-2">
+				<img src="/opt/workin-online.webp" alt="Laptop met een online Work-In les via Zoom: Hannah en deelnemers thuis op hun mat" class="w-full rounded-lg" width="1024" height="601" loading="lazy" decoding="async">
+				<div class="space-y-4">
+					<h2 class="text-2xl text-[#0f6dbf]">Het online volgen van de lessen biedt een aantal unieke voordelen</h2>
+					<ul class="list-disc space-y-2 pl-5">
+						<li><strong>Oefenen in je eigen fijne plek:</strong> Je volgt de les gewoon vanuit huis, in je eigen vertrouwde en rustige omgeving. Geen reistijd, geen gehaast in het verkeer en direct na de les kun je heerlijk ontspannen op je eigen bank of bed.</li>
+						<li><strong>Persoonlijke en individuele aandacht:</strong> Ondanks dat de lessen online zijn, kijkt Hannah nauwkeurig met iedereen individueel mee. Ze geeft gerichte aanwijzingen en correcties waar nodig, waardoor je de oefeningen veilig en effectief uitvoert.</li>
+						<li><strong>Optimale innerlijke focus:</strong> Je hoeft nauwelijks naar het scherm te kijken. Hannah doet de oefeningen bijna niet voor, maar begeleidt je met duidelijke, heldere instructies. Hierdoor kun je gewoon je ogen sluiten, je volledig laten leiden door haar stem en heel diep bij jezelf en in je eigen lichaam blijven.</li>
+						<li><strong>Maximale privacy en comfort:</strong> Omdat je in je eigen ruimte bent, hoef je je geen zorgen te maken over hoe je eruitziet of wat anderen doen. Je schiet niet in de vergelijking en traint op jouw eigen niveau en tempo, zonder afleiding van een drukke studioruimte.</li>
+						<li><strong>Lage drempel en flexibiliteit:</strong> Je rolt bij wijze van spreken zo vanuit je dagelijkse bezigheden op je matje. Het kost minder tijd rondom de les, waardoor het makkelijker in te passen is in je drukke weekschema.</li>
+						<li><strong>Overal te volgen:</strong> Ben je op vakantie of logeer je ergens? Je kan vanuit elke locatie meedoen met de les.</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
