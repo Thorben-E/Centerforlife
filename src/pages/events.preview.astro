@@ -1,141 +1,390 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/Footer.astro';
+
+const stripeLinks = {
+  masterclass1: 'https://buy.stripe.com/aFa00j7Au1oI5ySeMzeZ208',
+  masterclass2: 'https://buy.stripe.com/aFa9AT4oi6J2d1k5bZeZ20b',
+  masterclass3: 'https://buy.stripe.com/cNi3cv4oi1oI8L4gUHeZ209',
+  allThree: 'https://buy.stripe.com/3cI28r7Au0kE8L40VJeZ20c'
+};
 ---
 
-<Layout title="Events & Masterclasses">
-  <main class="min-h-screen bg-gray-50 py-12">
-    <div class="mx-auto w-[90vw] max-w-5xl">
+<Layout title="Masterclasses WORK – IN | Centerforlife">
+  <main class="min-h-screen bg-slate-50/70 py-10 md:py-16 text-slate-800">
+    <div class="mx-auto w-[92vw] max-w-5xl space-y-10 md:space-y-12">
 
-      <section class="mb-8 rounded-2xl bg-white p-8 shadow-md md:p-12">
-        <div class="md:flex md:items-center md:justify-between md:gap-6">
-          <div class="md:w-3/5">
-            <h1 class="text-3xl font-semibold text-[#0f6dbf] md:text-4xl">Alle masterclasses volgeboekt!</h1>
-            <p class="mt-4 text-lg text-slate-700">Verdiepende Masterclasses: 'Work-In' voor Lichaam, Geest &amp; Levensenergie</p>
-            <p class="mt-4 text-sm text-slate-600">Drie ochtenden van 3,5 uur — een synthese van biomechanica, energetisch werk en meditatieve beweging.</p>
-            <p class="mt-5 rounded-2xl border border-[#dbeafc] bg-[#f3f9ff] px-5 py-4 leading-snug text-[#0f6dbf] shadow-sm">
-              Hieronder lees je wat de masterclasses inhouden, zodat je weet waarvoor je je inschrijft.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#inschrijven" class="inline-block rounded-lg bg-[#0f6dbf] px-4 py-2 text-white shadow">Meld me aan</a>
-              <a href="#inhoud" class="inline-block rounded-lg border border-[#0f6dbf] px-4 py-2 text-[#0f6dbf]">Lees de inhoud</a>
+      <!-- Hero Header Section -->
+      <section class="rounded-3xl bg-white p-7 sm:p-10 md:p-12 shadow-sm border border-slate-100">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 leading-tight">
+                Masterclasses
+                <span class="block mt-1 font-normal text-[#0f6dbf] whitespace-nowrap">WORK – IN</span>
+              </h1>
+              <p class="mt-3 text-xl font-normal text-slate-700">
+                Geen work-out, maar een work-in
+              </p>
             </div>
-          </div>
-          <div class="mt-6 md:mt-0 md:w-2/5">
-            <div class="rounded-xl bg-gradient-to-br from-[#eaf4ff] to-white p-6 shadow-sm">
-              <p class="text-sm text-slate-600">Najaar 2026</p>
-              <ul class="mt-2 text-sm font-medium leading-tight text-slate-800">
-                <li class="break-words">20 sept — Masterclass 1 <span class="text-[#0f6dbf]">(vol)</span></li>
-                <li class="break-words">1 nov — Masterclass 2 <span class="text-[#0f6dbf]">(vol)</span></li>
-                <li class="break-words">12 dec — Masterclass 3 <span class="text-[#0f6dbf]">(vol)</span></li>
+
+            <div class="space-y-3 text-base leading-relaxed text-slate-700">
+              <p>
+                Stap 3,5 uur uit je dagelijkse routine. Geen haast, geen afleiding, kwaliteit voor jou.
+              </p>
+              <p class="font-medium text-slate-800">
+                Ervaar praktisch hoe jij:
+              </p>
+              <ul class="list-disc list-inside space-y-1.5 pl-1 text-slate-700">
+                <li>je zenuwstelsel kalmeert,</li>
+                <li>je optimaal je lichaam beweegt,</li>
+                <li>in je lijf zakt (in plaats van in je hoofd),</li>
+                <li>jezelf mentaal een gezondheids boost geeft, en</li>
+                <li>diep ontspant</li>
               </ul>
             </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a 
+                href="#inschrijven" 
+                class="inline-flex items-center justify-center rounded-xl bg-[#0f6dbf] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0b5aa0]"
+              >
+                Meld me aan
+              </a>
+              <a 
+                href="#inhoud" 
+                class="inline-flex items-center justify-center rounded-xl border-2 border-[#0f6dbf] bg-white px-6 py-3 text-sm font-semibold text-[#0f6dbf] transition hover:bg-blue-50"
+              >
+                Lees de inhoud
+              </a>
+            </div>
           </div>
+
+          <!-- Data, Tijden & Prijzen -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl border border-blue-100 bg-[#f4f9ff] p-6 sm:p-7 space-y-5">
+              <h2 class="text-base font-bold uppercase tracking-wider text-[#0f6dbf] border-b border-blue-100 pb-3">
+                Data, Tijden &amp; Prijzen
+              </h2>
+
+              <div class="space-y-2 text-sm text-slate-800">
+                <p><strong class="text-slate-900">24 januari:</strong> Masterclass 1 (Basis – Voeten, enkels en knieën)</p>
+                <p><strong class="text-slate-900">21 maart:</strong> Masterclass 2 (Fundament – Bovenbenen, bekken, onderrug)</p>
+                <p><strong class="text-slate-900">9 mei:</strong> Masterclass 3 (De As – Schouders, nek en armen)</p>
+              </div>
+
+              <div class="pt-2 border-t border-blue-100/80 space-y-1.5 text-sm text-slate-700">
+                <p><strong class="text-slate-900">Tijd:</strong> van 9:30u tot 13:00u (inloop vanaf 09:15u)</p>
+                <p><strong class="text-slate-900">Locatie:</strong> Home of Zen, Velperweg 95, Arnhem</p>
+                <p class="text-xs text-[#0f6dbf] font-medium">Let op: niet in de studio in Velp!</p>
+              </div>
+
+              <!-- Prijzen & Deal -->
+              <div class="pt-2 border-t border-blue-100/80 space-y-2 text-sm">
+                <p class="text-slate-800">
+                  <strong class="text-slate-900">Prijs per losse masterclass:</strong> €60
+                </p>
+                <div class="rounded-xl bg-white p-3.5 border border-blue-200">
+                  <p class="font-bold text-[#0f6dbf]">
+                    Drieluik Deal: alle 3 de masterclasses voor €150
+                  </p>
+                  <p class="text-xs text-slate-600 mt-0.5">
+                    Bespaar €30 bij deelname aan de complete reeks van 3 masterclasses.
+                  </p>
+                </div>
+              </div>
+
+              <a 
+                href="#inschrijven" 
+                class="block w-full rounded-xl bg-[#0f6dbf] hover:bg-[#0b5aa0] py-3 text-center text-sm font-semibold text-white shadow-xs transition"
+              >
+                Direct inschrijven
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section class="mb-8 grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5">
-        <div class="flex overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm md:block md:rounded-[1.5rem]">
-          <img src="/masterclass3.png" alt="Masterclass over voeten en enkels" class="h-36 w-28 shrink-0 object-cover object-center md:aspect-[4/5] md:h-auto md:w-full md:scale-[1.06]" loading="lazy" />
-          <div class="flex min-w-0 flex-1 flex-col justify-center px-4 py-3 md:block md:px-5 md:py-8">
-            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#0f6dbf] md:text-sm md:tracking-[0.2em]">Masterclass 1</p>
-            <h2 class="mt-1 text-base font-semibold leading-snug text-slate-800 md:mt-3 md:text-lg">Basis – Voeten, enkels en benen</h2>
-            <p class="mt-1 text-sm text-slate-500 md:mt-2">20 sept · volgeboekt</p>
+      <!-- 3 Masterclasses Platen & Titels -->
+      <section class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        
+        <!-- Masterclass 1 -->
+        <article class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+              <img 
+                src="/masterclasses/masterclass-1-basis.jpg" 
+                alt="Masterclass 1 Basis – Voeten, enkels en knieën – 24 januari" 
+                class="h-full w-full object-cover" 
+                loading="lazy" 
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                Masterclass 1 Basis – Voeten, enkels en knieën – 24 januari
+              </h3>
+            </div>
           </div>
-        </div>
+          <div class="p-6 pt-0">
+            <a 
+              href={stripeLinks.masterclass1} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex w-full items-center justify-center rounded-xl bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] px-4 py-2.5 text-xs font-bold text-[#0f6dbf] transition"
+            >
+              Inschrijven Masterclass 1 (€60)
+            </a>
+          </div>
+        </article>
 
-        <div class="flex overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm md:block md:rounded-[1.5rem]">
-          <img src="/masterclass1.png" alt="Masterclass over bekken en heupen" class="h-36 w-28 shrink-0 object-cover object-center md:aspect-[4/5] md:h-auto md:w-full md:scale-[1.06]" loading="lazy" />
-          <div class="flex min-w-0 flex-1 flex-col justify-center px-4 py-3 md:block md:px-5 md:py-8">
-            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#0f6dbf] md:text-sm md:tracking-[0.2em]">Masterclass 2</p>
-            <h2 class="mt-1 text-base font-semibold leading-snug text-slate-800 md:mt-3 md:text-lg">Fundament – Bekken, heupen en onderrug</h2>
-            <p class="mt-1 text-sm text-slate-500 md:mt-2">1 nov · volgeboekt</p>
+        <!-- Masterclass 2 -->
+        <article class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+              <img 
+                src="/masterclasses/masterclass-2-fundament.jpg" 
+                alt="Masterclass 2: Fundament – bovenbenen, bekken, onderrug – 21 maart" 
+                class="h-full w-full object-cover" 
+                loading="lazy" 
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                Masterclass 2: Fundament – bovenbenen, bekken, onderrug – 21 maart
+              </h3>
+            </div>
           </div>
-        </div>
+          <div class="p-6 pt-0">
+            <a 
+              href={stripeLinks.masterclass2} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex w-full items-center justify-center rounded-xl bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] px-4 py-2.5 text-xs font-bold text-[#0f6dbf] transition"
+            >
+              Inschrijven Masterclass 2 (€60)
+            </a>
+          </div>
+        </article>
 
-        <div class="flex overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm md:block md:rounded-[1.5rem]">
-          <img src="/masterclass2.png" alt="Masterclass over schouders en bovenrug" class="h-36 w-28 shrink-0 object-cover object-center md:aspect-[4/5] md:h-auto md:w-full md:scale-[1.06]" loading="lazy" />
-          <div class="flex min-w-0 flex-1 flex-col justify-center px-4 py-3 md:block md:px-5 md:py-8">
-            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#0f6dbf] md:text-sm md:tracking-[0.2em]">Masterclass 3</p>
-            <h2 class="mt-1 text-base font-semibold leading-snug text-slate-800 md:mt-3 md:text-lg">As – Schouders, wervelkolom en bovenrug</h2>
-            <p class="mt-1 text-sm text-slate-500 md:mt-2">12 dec · volgeboekt</p>
+        <!-- Masterclass 3 -->
+        <article class="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+              <img 
+                src="/masterclasses/masterclass-3-as.jpg" 
+                alt="Masterclass 3: De As – schouders, nek en armen – 9 mei" 
+                class="h-full w-full object-cover" 
+                loading="lazy" 
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                Masterclass 3: De As – schouders, nek en armen – 9 mei
+              </h3>
+            </div>
           </div>
-        </div>
+          <div class="p-6 pt-0">
+            <a 
+              href={stripeLinks.masterclass3} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex w-full items-center justify-center rounded-xl bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] px-4 py-2.5 text-xs font-bold text-[#0f6dbf] transition"
+            >
+              Inschrijven Masterclass 3 (€60)
+            </a>
+          </div>
+        </article>
+
       </section>
 
-      <section id="inhoud" class="mb-8 grid scroll-mt-[14vh] grid-cols-1 gap-6 md:grid-cols-2">
+      <!-- Inhoud Section (#inhoud) -->
+      <section id="inhoud" class="scroll-mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
 
-        <article class="rounded-xl bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-[#0f6dbf]">Wat houden de masterclasses in?</h2>
-          <p class="mt-3 text-slate-700">Dit is een actieve <strong>WORK-IN</strong>. We gaan doeltreffend bewegen, veiligheid ervaren en diep meditatief ontspannen. De uitleg krijg je tijdens het bewegen, zodat de kennis landt in je spieren en zenuwstelsel.</p>
-          <p class="mt-3 font-medium text-slate-700">Stap 3,5 uur uit de dagelijkse routine — geen haast, geen afleiding.</p>
-          <div class="mt-4">
-            <p class="text-sm font-medium text-slate-700">We slaan een brug tussen:</p>
-            <ul class="mt-2 ml-5 list-disc text-slate-700">
-              <li><strong class="text-[#0f6dbf]">Westers bewegen via Biomechanica:</strong> ervaar hoe het fysieke lichaam anatomisch functioneert en hoe je compensaties in jouw manier van bewegen herprogrammeert.</li>
-              <li><strong class="text-[#0f6dbf]">Oosters bewegen via Yoga en Qi Gong:</strong> laat je levensenergie stromen en toenemen door Yoga, Traditionele Chinese geneeskunde en Taoïsme.</li>
+        <!-- Wat houden de masterclasses in? -->
+        <article class="rounded-2xl bg-white p-7 md:p-8 border border-slate-100 shadow-xs space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">Wat houden de masterclasses in?</h2>
+          <p class="text-slate-700 leading-relaxed text-sm">
+            Dit is een actieve WORK-IN. We gaan doeltreffend bewegen, veiligheid ervaren en diep meditatief ontspannen. De uitleg krijg je tijdens het bewegen, zodat de kennis landt in je fascie, spieren en zenuwstelsel.
+          </p>
+          <div class="pt-1 space-y-2 text-sm text-slate-700">
+            <p class="font-medium text-slate-900">We slaan een brug tussen:</p>
+            <ul class="list-disc list-inside space-y-2 pl-1 leading-relaxed">
+              <li>
+                <strong class="text-slate-900">Westers bewegen door Fasciewerk en Biomechanica:</strong> ervaar hoe het fysieke lichaam anatomisch functioneert en hoe je compensaties in jouw manier van bewegen herprogrammeert.
+              </li>
+              <li>
+                <strong class="text-slate-900">Oosters bewegen via Yoga en Qi Gong:</strong> laat je levensenergie stromen en toenemen door Yoga, Traditionele Chinese geneeskunde en Taoïsme.
+              </li>
             </ul>
           </div>
         </article>
 
-        <article class="rounded-xl bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-[#0f6dbf]">Voor wie?</h2>
-          <p class="mt-3 text-slate-700">Kom je al jaren bij mij op de mat en <strong>zoek je meer diepgang, verfijning of integratie in je practice?</strong></p>
-          <p class="mt-2 text-slate-700">Of merk je dat je vastzit in je hoofd en een gespannen lichaam, en <strong>snak je naar een fijner en meer ontspannen lichaam?</strong></p>
-          <p class="mt-2 text-slate-700">Ervaren en meer beginnende deelnemers zijn welkom.</p>
+        <!-- Voor wie? -->
+        <article class="rounded-2xl bg-white p-7 md:p-8 border border-slate-100 shadow-xs space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">Voor wie?</h2>
+          <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 leading-relaxed pl-1">
+            <li>Kom je al jaren bij mij op de mat en zoek je meer diepgang of verfijning in je practice?</li>
+            <li>Of merk je dat je vastzit in je hoofd en een gespannen lichaam, en snak je naar een fijner en meer ontspannen lichaam?</li>
+            <li>Je wil meer ontdekken over de wonderlijke wereld van het fascie.</li>
+            <li>Je bent bij de vorige masterclasses geweest en wil verdieping of herhaling wil? (Het uitgangspunt is hetzelfde met voor een groot deel andere oefeningen.)</li>
+          </ul>
+          <p class="text-sm font-medium text-slate-900 pt-2 border-t border-slate-100">
+            Ervaren en meer beginnende deelnemers zijn welkom.
+          </p>
         </article>
 
-        <article class="rounded-xl bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-[#0f6dbf]">Wat kun je verwachten?</h2>
-          <ul class="mt-3 ml-5 list-disc space-y-2 text-slate-700">
-            <li><strong class="text-[#0f6dbf]">Al doende leren:</strong> geen droge powerpoints, maar uitleg terwijl je de houdingen uitvoert. Je leert patronen in je lichaam direct herkennen en herprogrammeren door te voelen en te doen. Kaiut Yoga en de Erik Franklin Method geven bruikbare inzichten in anatomie en biomechanica.</li>
-            <li><strong class="text-[#0f6dbf]">Zenuwstelsel &amp; Emotionele release:</strong> door gerichte, meditatieve beweging haal je je mind uit de controle-modus en breng je je hele systeem in een diepe staat van rust.</li>
-            <li><strong class="text-[#0f6dbf]">Qi &amp; Energetische stroom:</strong> Qi Gong en Taoïstische principes laten je levensenergie vrij stromen, zodat je niet alleen ontspant, maar ook echt oplaadt.</li>
-            <li><strong class="text-[#0f6dbf]">Veel persoonlijke aandacht:</strong> maximaal 14 deelnemers — uitgebreid ruimte voor individuele aanpassingen en specifieke vragen. (<strong>vol = vol</strong>)</li>
+        <!-- Wat kun je verwachten? -->
+        <article class="rounded-2xl bg-white p-7 md:p-8 border border-slate-100 shadow-xs space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">Wat kun je verwachten?</h2>
+          <ul class="list-disc list-inside space-y-2.5 text-sm text-slate-700 leading-relaxed pl-1">
+            <li>
+              <strong class="text-slate-900">Al doende leren:</strong> geen droge powerpoints, maar uitleg terwijl je de houdingen uitvoert. Je leert patronen in je lichaam direct herkennen en herprogrammeren door te voelen en te doen. Kaiut Yoga, Thomas Myers en de Erik Franklin Method geven bruikbare inzichten in anatomie, fascie en biomechanica.
+            </li>
+            <li>
+              <strong class="text-slate-900">Zenuwstelsel &amp; Emotionele release:</strong> door gerichte, meditatieve beweging haal je je mind uit de controle-modus en breng je je hele systeem in een diepe staat van rust.
+            </li>
+            <li>
+              <strong class="text-slate-900">Qi &amp; Energetische stroom:</strong> Qi Gong en Taoïstische principes laten je levensenergie vrij stromen, zodat je niet alleen ontspant, maar ook echt oplaadt.
+            </li>
+            <li>
+              <strong class="text-slate-900">Veel persoonlijke aandacht:</strong> maximaal 16 deelnemers, uitgebreid ruimte voor individuele aanpassingen en specifieke vragen. (vol = vol)
+            </li>
           </ul>
         </article>
 
-        <article class="rounded-xl bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-[#0f6dbf]">Het Drieluik</h2>
-          <p class="mt-3 text-slate-700">Elke ochtend is los te volgen, maar ook als drieluik. De thema's versterken elkaar als een rode draad. We behandelen elk gebied altijd in relatie tot de totale biomechanica van het lichaam. Ideaal voor wie fundamentele kennis wil opbouwen en patronen wil doorbreken.</p>
-          <ul class="mt-3 ml-5 list-disc text-slate-700">
-            <li><strong class="text-[#0f6dbf]">Masterclass 1 | Zondag 20 september:</strong> de Basis – Voeten, enkels en benen.</li>
-            <li><strong class="text-[#0f6dbf]">Masterclass 2 | Zondag 1 november:</strong> het Fundament – Bekken, heupen en onderrug.</li>
-            <li><strong class="text-[#0f6dbf]">Masterclass 3 | Zaterdag 12 december:</strong> de As – Schouders, wervelkolom en bovenrug.</li>
-          </ul>
-        </article>
-
-        <article class="rounded-xl bg-white p-6 shadow-sm md:col-span-2">
-          <h2 class="text-2xl font-semibold text-[#0f6dbf]">Praktische informatie</h2>
-          <ul class="mt-3 space-y-2 text-slate-700">
-            <li><strong class="text-[#0f6dbf]">Tijd:</strong> 09:30 uur tot 13:00 uur (inloop vanaf 09:15 uur)</li>
-            <li><strong class="text-[#0f6dbf]">Locatie:</strong> Home of Zen, Velperweg 95, Arnhem <strong class="text-[#0f6dbf]">(Let op: niet in de studio in Velp!)</strong></li>
-            <li><strong class="text-[#0f6dbf]">Niveau:</strong> Open voor iedereen die diepgang zoekt. Zowel voor gevorderde leerlingen die hun fysieke en energetische kennis willen vergroten, als voor gemotiveerde beginners die willen leren door te doen.</li>
-            <li><strong class="text-[#0f6dbf]">Groepsgrootte:</strong> maximaal 14 deelnemers.</li>
+        <!-- Het Drieluik -->
+        <article class="rounded-2xl bg-white p-7 md:p-8 border border-slate-100 shadow-xs space-y-4">
+          <h2 class="text-xl font-bold text-slate-900">Het Drieluik</h2>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Elke ochtend is los te volgen, maar ook als drieluik. De thema's versterken elkaar als een rode draad. We behandelen elk gebied altijd in relatie tot de totale biomechanica van het lichaam. Ideaal voor wie fundamentele kennis wil opbouwen en patronen wil doorbreken.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-800 pt-2 border-t border-slate-100">
+            <li><strong class="text-slate-900">Masterclass 1 | Zondag 24 januari:</strong> de Basis – Voeten, enkels en knieën</li>
+            <li><strong class="text-slate-900">Masterclass 2 | Zondag 21 maart:</strong> het Fundament – Bovenbenen, bekken en onderrug</li>
+            <li><strong class="text-slate-900">Masterclass 3 | Zondag 9 mei:</strong> de As – Schouders, wervelkolom en bovenrug</li>
           </ul>
         </article>
 
       </section>
 
-      <section id="inschrijven" class="mb-8 scroll-mt-[14vh] rounded-xl bg-white p-6 text-center shadow-md md:p-10">
-        <h2 class="text-2xl font-semibold text-[#0f6dbf]">Inschrijven</h2>
-        <div class="mx-auto mt-6 max-w-2xl space-y-8 text-lg leading-relaxed text-slate-700">
-          <p>
-            Wil je graag op de wachtlijst?<br />
-            Stuur een <a href="mailto:info@centerforlife.nl" class="font-semibold text-[#0f6dbf] underline underline-offset-4">email</a>.
-          </p>
-          <p>
-            In het voorjaar geef ik weer 3 masterclasses. Wil je alvast aanmelden?<br />
-            Stuur een <a href="mailto:info@centerforlife.nl" class="font-semibold text-[#0f6dbf] underline underline-offset-4">email</a>.
-          </p>
+      <!-- Blok voor Inschrijven (#inschrijven) -->
+      <section id="inschrijven" class="scroll-mt-20 rounded-3xl bg-white p-7 sm:p-10 md:p-12 border border-slate-200 shadow-sm space-y-8">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Inschrijven</h2>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- Alle 3 de masterclasses (Drieluik) -->
+          <div class="rounded-2xl border-2 border-blue-200 bg-[#f4f9ff] p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div class="space-y-1">
+              <h3 class="text-xl font-bold text-slate-900">Alle 3 de masterclasses</h3>
+              <p class="text-sm text-slate-700">
+                24 januari, 21 maart en 9 mei · <strong>€150</strong> (Voordelig drieluik tarief)
+              </p>
+            </div>
+
+            <div class="shrink-0">
+              <a 
+                href={stripeLinks.allThree} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex w-full md:w-auto items-center justify-center rounded-xl bg-[#0f6dbf] hover:bg-[#0b5aa0] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition"
+              >
+                Inschrijven alle 3 de masterclasses (€150)
+              </a>
+            </div>
+          </div>
+
+          <!-- Knoppen voor losse masterclasses -->
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+            <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-3 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900">Masterclass 1</h4>
+                <p class="text-xs text-slate-600">24 januari · €60</p>
+                <p class="text-xs text-slate-500 mt-1">Basis – Voeten, enkels en knieën</p>
+              </div>
+              <a 
+                href={stripeLinks.masterclass1} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] py-2.5 text-center text-xs font-bold text-[#0f6dbf] transition"
+              >
+                Inschrijven Masterclass 1 (€60)
+              </a>
+            </div>
+
+            <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-3 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900">Masterclass 2</h4>
+                <p class="text-xs text-slate-600">21 maart · €60</p>
+                <p class="text-xs text-slate-500 mt-1">Fundament – bovenbenen, bekken, onderrug</p>
+              </div>
+              <a 
+                href={stripeLinks.masterclass2} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] py-2.5 text-center text-xs font-bold text-[#0f6dbf] transition"
+              >
+                Inschrijven Masterclass 2 (€60)
+              </a>
+            </div>
+
+            <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-3 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900">Masterclass 3</h4>
+                <p class="text-xs text-slate-600">9 mei · €60</p>
+                <p class="text-xs text-slate-500 mt-1">De As – schouders, nek en armen</p>
+              </div>
+              <a 
+                href={stripeLinks.masterclass3} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-[#e8f2fc] hover:bg-[#0f6dbf] hover:text-white border border-[#0f6dbf] py-2.5 text-center text-xs font-bold text-[#0f6dbf] transition"
+              >
+                Inschrijven Masterclass 3 (€60)
+              </a>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
-      <section class="rounded-xl bg-white p-6 shadow-sm">
-        <h2 class="text-2xl font-semibold text-[#0f6dbf]">Over Hannah Mutsaerts</h2>
-        <p class="mt-3 text-slate-700">Hannah heeft ruim <strong class="text-[#0f6dbf]">25 jaar praktijkervaring en 20 jaar ervaring als docent en therapeut</strong>. Door haar dubbele scholing in zowel de Westerse medische anatomie als Oosterse geneeskunde (Shiatsu en Taoïsme), heeft zij het vermogen om disbalansen direct op te sporen. Ze vertaalt fysieke signalen naar persoonlijke groei en biedt een nuchtere, veilige omgeving waarin kennis, respect en plezier centraal staan.</p>
-        <p class="mt-4 text-slate-700">Stap van de mat met een kalm zenuwstelsel, heldere gedachten, anatomische inzichten en een lijf dat tintelt vol levensenergie.</p>
+      <!-- Over Hannah Mutsaerts Section -->
+      <section class="rounded-3xl bg-white p-7 sm:p-10 md:p-12 border border-slate-100 shadow-xs">
+        <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10">
+          
+          <div class="md:col-span-4 flex justify-center">
+            <div class="w-48 sm:w-56 md:w-full max-w-[260px] aspect-square overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <img 
+                src="/opt/hannah-closeup.webp" 
+                alt="Hannah Mutsaerts" 
+                class="h-full w-full object-cover object-center" 
+                loading="lazy" 
+                decoding="async" 
+              />
+            </div>
+          </div>
+
+          <div class="md:col-span-8 space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900">Over Hannah Mutsaerts</h2>
+            <p class="text-sm leading-relaxed text-slate-700">
+              Hannah heeft ruim 25 jaar praktijkervaring en 20 jaar ervaring als docent en therapeut. Door haar dubbele scholing in zowel de Westerse medische anatomie als Oosterse geneeskunde (Shiatsu en Taoïsme), heeft zij het vermogen om disbalansen direct op te sporen. Ze vertaalt fysieke signalen naar persoonlijke groei en biedt een nuchtere, veilige omgeving waarin kennis, respect en plezier centraal staan.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-700">
+              Stap van de mat met een kalm zenuwstelsel, anatomische inzichten en een lijf dat tintelt vol levensenergie.
+            </p>
+          </div>
+
+        </div>
       </section>
 
     </div>
   </main>
+
+  <Footer />
 </Layout>
